@@ -6,9 +6,17 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Mountain Preservation Foundation | Protect the World's Great Ranges</title>
 <meta name="description" content="A global foundation for the world's mountains: preserving the great ranges, protecting the people beneath them, and funding the corridors, schools, clinics, and livelihoods that keep both standing.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mountain Preservation Foundation">
+<meta property="og:title" content="Mountain Preservation Foundation | Protect the World's Great Ranges">
+<meta property="og:description" content="The world's first permanent institution dedicated entirely to mountain ecosystems and the communities who protect them.">
+<meta property="og:image" content="https://res.cloudinary.com/planet5/image/upload/c_fill,g_auto,w_1200,h_630,f_jpg,q_auto/Nepal-Expedition-Mountain-Preservation_vxqekg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FBF9F4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 20l6.5-13 4 7 2.5-4.5L21 20z' fill='none' stroke='%23F4C227' stroke-width='1.8' stroke-linejoin='round'/%3E%3Ccircle cx='16.5' cy='6' r='1.6' fill='%23F4C227'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -16,127 +24,154 @@
   img { max-width: 100%; }
 
   :root {
-    --asphalt: #0E110E;
-    --panel: #0a0d0a;
-    --bone: #ECE7D8;
-    --bone-dim: #AEAC97;
-    --bone-faint: #857f6f;
+    --paper: #FBF9F4;
+    --card: #FFFFFF;
+    --ink: #1F231E;
+    --ink-soft: #5E6157;
+    --ink-faint: #8B8B7E;
+    --hair: rgba(31, 35, 30, 0.14);
     --gold: #F4C227;
-    --hair: rgba(236, 231, 216, 0.14);
+    --gold-deep: #8F6E14;
   }
 
   body {
-    background: var(--asphalt);
-    color: var(--bone);
+    background: var(--paper);
+    color: var(--ink);
     font-family: 'Inter', system-ui, sans-serif;
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 16.5px;
+    line-height: 1.75;
   }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
-  .narrow { max-width: 720px; margin-left: auto; margin-right: auto; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+  .narrow { max-width: 700px; margin-left: auto; margin-right: auto; }
 
   .eyebrow {
-    font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--gold);
+    font-size: 11.5px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold-deep);
   }
-  h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; text-wrap: balance; }
-  .ico { stroke: var(--gold); fill: none; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+  h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; text-wrap: balance; color: var(--ink); }
+  .ico { stroke: var(--gold-deep); fill: none; stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round; }
 
   /* Nav */
   nav {
     position: sticky; top: 0; z-index: 50;
-    background: rgba(14, 17, 14, 0.92); backdrop-filter: blur(8px);
+    background: rgba(251, 249, 244, 0.94); backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--hair);
   }
-  nav .bar { display: flex; align-items: center; gap: 18px; padding: 14px 24px; max-width: 1080px; margin: 0 auto; }
-  .wordmark { display: flex; align-items: center; gap: 10px; color: var(--bone); text-decoration: none; }
-  .wordmark .ico { width: 22px; height: 22px; }
-  .wordmark span { font-size: 12.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
-  nav .links { margin-left: auto; display: flex; align-items: center; gap: 22px; }
-  nav .links a { color: var(--bone-dim); text-decoration: none; font-size: 13.5px; }
-  nav .links a:hover { color: var(--bone); }
+  nav .bar { display: flex; align-items: center; gap: 18px; padding: 16px 28px; max-width: 1120px; margin: 0 auto; }
+  .wordmark { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; }
+  .wordmark .ico { width: 22px; height: 22px; stroke: var(--gold-deep); }
+  .wordmark span { font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; }
+  nav .links { margin-left: auto; display: flex; align-items: center; gap: 26px; }
+  nav .links a { color: var(--ink-soft); text-decoration: none; font-size: 13.5px; }
+  nav .links a:hover { color: var(--ink); }
   .btn {
-    display: inline-block; background: var(--gold); color: #171406;
-    font-weight: 600; font-size: 14px; letter-spacing: 0.02em;
-    padding: 11px 24px; border-radius: 3px; text-decoration: none;
+    display: inline-block; background: var(--ink); color: var(--paper);
+    font-weight: 500; font-size: 14px; letter-spacing: 0.04em;
+    padding: 13px 30px; border-radius: 2px; text-decoration: none;
   }
-  .btn:hover { filter: brightness(1.06); }
-  .btn.ghost { background: transparent; color: var(--bone); border: 1px solid var(--hair); }
-  @media (max-width: 640px) { nav .links a:not(.btn) { display: none; } }
+  .btn:hover { background: #000; }
+  .btn.gold { background: var(--gold); color: #171406; font-weight: 600; }
+  .btn.gold:hover { filter: brightness(1.05); }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+  @media (max-width: 680px) { nav .links a:not(.btn) { display: none; } }
 
-  /* Hero */
-  .hero { position: relative; min-height: 88vh; display: flex; align-items: flex-end; overflow: hidden; }
-  .hero img.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
-  .hero .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,17,14,0.25) 0%, rgba(14,17,14,0.55) 55%, rgba(14,17,14,0.96) 100%); }
-  .hero .inner { position: relative; padding: 120px 24px 72px; max-width: 1080px; margin: 0 auto; width: 100%; }
-  .hero h1 { font-size: clamp(34px, 6vw, 62px); line-height: 1.08; margin: 14px 0 18px; max-width: 17ch; }
-  .hero p { color: var(--bone-dim); font-size: clamp(16px, 2.2vw, 19px); max-width: 54ch; margin: 0 0 30px; }
-  .hero .ctas { display: flex; flex-wrap: wrap; gap: 14px; }
-
-  /* Sections */
-  section { padding: 84px 0; border-top: 1px solid var(--hair); }
-  section .eyebrow { display: block; margin-bottom: 10px; }
-  h2 { font-size: clamp(28px, 4.4vw, 44px); line-height: 1.12; margin: 0 0 22px; }
-  p { margin: 0 0 18px; color: var(--bone-dim); }
-  p.lead { color: var(--bone); font-size: 18px; }
-  strong { color: var(--bone); }
-
-  .statgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1px; background: var(--hair); border: 1px solid var(--hair); margin-top: 36px; }
-  .stat { background: var(--panel); padding: 22px 20px; }
-  .stat .num { font-family: 'Playfair Display', serif; font-size: 30px; color: var(--gold); line-height: 1.15; font-variant-numeric: tabular-nums; }
-  .stat .what { font-size: 12.5px; color: var(--bone-faint); margin-top: 6px; line-height: 1.5; }
+  /* Hero: editorial, type-first */
+  .hero { padding: 96px 28px 72px; max-width: 1120px; margin: 0 auto; text-align: center; }
+  .hero .eyebrow { display: block; margin-bottom: 22px; }
+  .hero h1 { font-size: clamp(38px, 6.4vw, 74px); line-height: 1.06; margin: 0 auto 26px; max-width: 18ch; font-weight: 500; }
+  .hero p { color: var(--ink-soft); font-size: clamp(16.5px, 2vw, 19.5px); max-width: 58ch; margin: 0 auto 38px; }
+  .hero .ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+  @media (prefers-reduced-motion: no-preference) {
+    .hero > * { animation: rise 0.9s ease-out both; }
+    .hero p { animation-delay: 0.12s; } .hero .ctas { animation-delay: 0.22s; }
+    @keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+  }
 
   figure.band { margin: 0; position: relative; }
-  figure.band img { width: 100%; height: 62vh; object-fit: cover; display: block; }
-  figure.band figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 24px 18px; font-size: 12.5px; color: var(--bone-dim); background: linear-gradient(180deg, transparent, rgba(14,17,14,0.85)); }
-  figure.band figcaption .wrap { padding: 0; max-width: 1080px; margin: 0 auto; }
+  figure.band img { width: 100%; height: 74vh; object-fit: cover; display: block; }
+  figure.band figcaption {
+    max-width: 1120px; margin: 0 auto; padding: 14px 28px 0;
+    font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 15px; color: var(--ink-faint);
+  }
 
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-top: 36px; }
-  .card { background: var(--panel); border: 1px solid var(--hair); padding: 26px 24px; }
-  .card .ico { width: 30px; height: 30px; display: block; margin-bottom: 16px; }
+  /* Sections */
+  section { padding: 96px 0; }
+  section + section { border-top: 1px solid var(--hair); }
+  section .eyebrow { display: block; margin-bottom: 12px; }
+  h2 { font-size: clamp(28px, 4.2vw, 46px); line-height: 1.12; margin: 0 0 24px; font-weight: 500; }
+  p { margin: 0 0 18px; color: var(--ink-soft); }
+  p.lead { color: var(--ink); font-size: 18.5px; }
+  strong { color: var(--ink); font-weight: 600; }
+  section[id] { scroll-margin-top: 68px; }
+
+  .statement { font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: clamp(21px, 2.9vw, 28px); line-height: 1.5; color: var(--ink); margin: 0 0 18px; text-wrap: balance; }
+  .statement em { font-style: italic; color: var(--gold-deep); }
+  .goldrule { width: 44px; height: 2px; background: var(--gold); border: 0; margin: 34px 0; }
+  .center .goldrule { margin-left: auto; margin-right: auto; }
+
+  .statgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1px; background: var(--hair); border: 1px solid var(--hair); margin-top: 40px; }
+  .stat { background: var(--card); padding: 26px 22px; }
+  .stat .num { font-family: 'Playfair Display', serif; font-size: 32px; color: var(--ink); line-height: 1.15; font-variant-numeric: tabular-nums; }
+  .stat .num::after { content: ""; display: block; width: 26px; height: 2px; background: var(--gold); margin-top: 10px; }
+  .stat .what { font-size: 12.5px; color: var(--ink-faint); margin-top: 10px; line-height: 1.55; }
+
+  /* Albums: framed prints in a horizontal gallery */
+  .album { margin-top: 44px; display: flex; gap: 22px; overflow-x: auto; padding: 4px 28px 26px; scroll-snap-type: x mandatory; }
+  .album::-webkit-scrollbar { height: 6px; }
+  .album::-webkit-scrollbar-thumb { background: var(--hair); border-radius: 3px; }
+  .album figure { flex: 0 0 340px; margin: 0; scroll-snap-align: start; }
+  .album figure.tall { flex-basis: 270px; }
+  .album .frame { background: var(--card); border: 1px solid var(--hair); padding: 12px; box-shadow: 0 10px 28px rgba(31,35,30,0.07); }
+  .album img { display: block; width: 100%; height: 236px; object-fit: cover; }
+  .album figcaption { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 14px; color: var(--ink-faint); padding: 12px 4px 0; line-height: 1.5; }
+  .albumhead { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; }
+  .albumhead .hint { margin-left: auto; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin-top: 40px; }
+  .card { background: var(--card); border: 1px solid var(--hair); padding: 28px 24px; }
+  .card .ico { width: 30px; height: 30px; display: block; margin-bottom: 18px; }
   .card h3 { font-size: 19px; margin: 0 0 8px; }
-  .card .tag { font-size: 10.5px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--bone-faint); display: block; margin-bottom: 6px; }
-  .card p { font-size: 13.5px; line-height: 1.6; margin: 0; color: var(--bone-faint); }
+  .card .tag { font-size: 10.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); display: block; margin-bottom: 8px; }
+  .card p { font-size: 13.5px; line-height: 1.65; margin: 0; color: var(--ink-soft); }
 
-  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 8px; }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-top: 8px; }
   .split img { width: 100%; display: block; }
-  @media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
+  .split .frame { background: var(--card); border: 1px solid var(--hair); padding: 14px; box-shadow: 0 12px 32px rgba(31,35,30,0.08); }
+  @media (max-width: 880px) { .split { grid-template-columns: 1fr; } }
 
-  .rows { border: 1px solid var(--hair); margin-top: 36px; }
-  .row { display: flex; flex-wrap: wrap; gap: 6px 28px; padding: 20px 24px; border-top: 1px solid var(--hair); align-items: baseline; }
+  .rows { border: 1px solid var(--hair); background: var(--card); margin-top: 40px; }
+  .row { display: flex; flex-wrap: wrap; gap: 6px 28px; padding: 22px 26px; border-top: 1px solid var(--hair); align-items: baseline; }
   .row:first-child { border-top: 0; }
-  .row .k { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 14.5px; color: var(--bone); min-width: 230px; }
+  .row .k { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 14.5px; color: var(--ink); min-width: 240px; }
   .row .k .ico { width: 20px; height: 20px; flex: none; }
-  .row .v { flex: 1; min-width: 260px; font-size: 14.5px; color: var(--bone-dim); }
+  .row .v { flex: 1; min-width: 260px; font-size: 14.5px; color: var(--ink-soft); }
   @media (max-width: 640px) { .row .k, .row .v { flex-basis: 100%; min-width: 0; } }
 
   /* Give */
-  #give { background: var(--panel); }
-  .give-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 36px; }
-  .give { background: var(--asphalt); border: 1px solid var(--hair); padding: 28px 26px; display: flex; flex-direction: column; }
-  .give .amt { font-family: 'Playfair Display', serif; font-size: 34px; color: var(--gold); }
-  .give h3 { font-size: 18px; margin: 6px 0 10px; }
-  .give p { font-size: 13.5px; color: var(--bone-faint); flex: 1; }
+  #give { background: var(--card); border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair); }
+  .give-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 40px; }
+  .give { background: var(--paper); border: 1px solid var(--hair); padding: 30px 28px; display: flex; flex-direction: column; }
+  .give .amt { font-family: 'Playfair Display', serif; font-size: 34px; color: var(--ink); }
+  .give .amt::after { content: ""; display: block; width: 26px; height: 2px; background: var(--gold); margin-top: 10px; }
+  .give h3 { font-size: 18px; margin: 14px 0 10px; }
+  .give p { font-size: 13.5px; color: var(--ink-soft); flex: 1; }
   .give .btn { margin-top: 18px; text-align: center; }
-  .finequote { font-size: 12px; color: var(--bone-faint); margin-top: 26px; line-height: 1.65; }
+  .finequote { font-size: 12.5px; color: var(--ink-faint); margin-top: 28px; line-height: 1.7; }
 
-  /* Compliance + footer */
-  .legalblock { border: 1px solid var(--hair); padding: 28px 30px; margin-top: 44px; font-size: 13px; color: var(--bone-faint); line-height: 1.7; }
-  .legalblock h3 { font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--bone-dim); margin: 0 0 14px; }
-  .legalblock p { font-size: 13px; margin-bottom: 12px; color: var(--bone-faint); }
-  footer { border-top: 1px solid var(--hair); padding: 44px 0 60px; font-size: 12.5px; color: var(--bone-faint); }
-  footer .wordmark { margin-bottom: 14px; }
-  footer a { color: var(--bone-dim); }
+  .legalblock { border: 1px solid var(--hair); background: var(--paper); padding: 30px 32px; margin-top: 48px; font-size: 13px; color: var(--ink-faint); line-height: 1.7; }
+  .legalblock h3 { font-family: 'Inter', sans-serif; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 14px; }
+  .legalblock p { font-size: 13px; margin-bottom: 12px; color: var(--ink-faint); }
+  footer { border-top: 1px solid var(--hair); padding: 48px 0 64px; font-size: 12.5px; color: var(--ink-faint); }
+  footer .wordmark { margin-bottom: 16px; }
+  footer a { color: var(--ink-soft); }
 
   @media (max-width: 640px) {
-    section { padding: 60px 0; }
-    .hero .inner { padding: 90px 24px 54px; }
-    figure.band img { height: 44vh; }
+    section { padding: 64px 0; }
+    .hero { padding: 64px 20px 48px; }
+    figure.band img { height: 48vh; }
+    .album figure { flex-basis: 280px; }
   }
-  @media print {
-    nav, .btn { display: none; }
-    body { background: #fff; color: #1a1a1a; }
-  }
+  @media print { nav, .btn { display: none; } }
 </style>
 </head>
 <body>
@@ -152,29 +187,30 @@
       <a href="#work">The Work</a>
       <a href="#corridor">The Corridor</a>
       <a href="#accountability">Accountability</a>
-      <a class="btn" href="#give">Donate</a>
+      <a class="btn gold" href="#give">Donate</a>
     </div>
   </div>
 </nav>
 
 <header class="hero" id="top">
-  <img class="bg" src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_2000/Nepal-Expedition-Mountain-Preservation_vxqekg" alt="A herder leads loaded yaks toward the high peaks of the Nepal Himalaya" fetchpriority="high">
-  <div class="scrim"></div>
-  <div class="inner">
-    <span class="eyebrow">Mountain Preservation Foundation</span>
-    <h1>Commerce holds the line. Your gift builds the corridor.</h1>
-    <p>A global foundation for the world's mountains: preserving the great ranges, protecting the people beneath them, and funding the corridors, schools, clinics, and livelihoods that keep both standing.</p>
-    <div class="ctas">
-      <a class="btn" href="#give">Give now</a>
-      <a class="btn ghost" href="#gap">Read the case</a>
-    </div>
+  <span class="eyebrow">Mountain Preservation Foundation</span>
+  <h1>Every great range, preserved by the people who live beneath it.</h1>
+  <p>The world's first permanent institution dedicated entirely to mountain ecosystems and the communities who protect them. Born in the Nepal Himalaya, built for every range on Earth.</p>
+  <div class="ctas">
+    <a class="btn gold" href="#give">Give now</a>
+    <a class="btn ghost" href="#gap">Read the case</a>
   </div>
 </header>
 
-<section id="gap">
+<figure class="band">
+  <img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_2400/Nepal-Expedition-Mountain-Preservation_vxqekg" alt="A herder leads loaded yaks toward the high peaks of the Nepal Himalaya" fetchpriority="high">
+  <figcaption>Above the Khumbu, Nepal. Photography from the Planet 5 expeditions.</figcaption>
+</figure>
+
+<section id="gap" style="border-top:0">
   <div class="wrap narrow">
     <span class="eyebrow">Why Mountains</span>
-    <h2>Mountains have had silence.</h2>
+    <h2>Among the least-funded ecosystems on Earth.</h2>
     <p class="lead">Mountains supply fresh water to roughly half of humanity. Two billion people live in and below them. One in three mountain species faces extinction. Yet the great ranges receive a fraction of the philanthropic attention given to oceans and rainforests.</p>
     <p>There is no global institution whose sole mandate is the preservation of mountain landscapes and mountain communities together. The Mountain Preservation Foundation exists to be that institution: born in the Nepal Himalaya, built for every range on Earth.</p>
   </div>
@@ -188,6 +224,114 @@
   </div>
 </section>
 
+<section id="mission">
+  <div class="wrap narrow center" style="text-align:center">
+    <span class="eyebrow">Our Mission</span>
+    <p class="statement">To preserve the world's great mountain ranges and to strengthen the communities who call them home: funding the permanent protection of high-mountain forests, watersheds, and wildlife corridors; building and equipping schools and health clinics in remote mountain villages; and investing in safe, dignified livelihoods that keep forests standing and families together.</p>
+    <hr class="goldrule">
+    <span class="eyebrow">Our Vision</span>
+    <p class="statement">A world where every great mountain range is preserved by the people who live beneath it; where standing forests, thriving villages, open wildlife corridors, and <em>safe childhoods</em> are one and the same achievement.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <span class="eyebrow">The Origin</span>
+        <h2>It began with a woman who saw what the mountains were losing.</h2>
+        <p class="lead">In 2007, while Tashi Wangchuk Tenzing, grandson of Tenzing Norgay, was summiting Everest for the third time, his wife Bandi Nima Sherpa Tenzing stood above the terraced hills of Nuwakot district and saw something beyond the landscape: a community where human trafficking and emigration were draining families from the mountains.</p>
+        <p>She decided to change the economics. She believed the mountains could only be protected if families could prosper without leaving them. The Tenzings planted coffee. From that decision grew a farm that supports hundreds of families, and a nonprofit that builds schools, equips clinics, sponsors children, and runs anti-trafficking programs across the Himalaya.</p>
+        <p><strong>The coffee is the product. The protection is the purpose.</strong> The Foundation exists to carry that purpose to every great range, and protection from trafficking is the work we enter first.</p>
+      </div>
+      <figure style="margin:0">
+        <div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_1100/Nepal-Coffee-Tashi_on7rne" alt="Tashi Wangchuk Tenzing inspecting washed coffee beans at the processing station" loading="lazy"></div>
+        <figcaption style="font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:var(--ink-faint);padding-top:12px">Tashi Wangchuk Tenzing at the washing station, Nuwa Estate.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="albumhead">
+      <div>
+        <span class="eyebrow">The Work, in Pictures</span>
+        <h2 style="margin-bottom:6px">The farms that hold the forest.</h2>
+      </div>
+      <span class="hint">Scroll →</span>
+    </div>
+  </div>
+  <div class="album">
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0183_2025_nepal_web_srojwu" alt="Freshly picked coffee cherries held in cupped hands" loading="lazy"></div><figcaption>The harvest that changed the economics of a valley.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_1005_2025_nepal_web_yv738b" alt="Hands picking ripe red coffee cherries from the branch" loading="lazy"></div><figcaption>Shade-grown arabica, picked by hand at altitude.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0957_2025_nepal_web_ouljyv" alt="A farmer greets the camera among coffee trees" loading="lazy"></div><figcaption>Nuwakot's growers, the first guardians of the corridor.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_1013_2025_nepal_web_me0azz" alt="Rows of young coffee plants under prayer flags on a hillside farm" loading="lazy"></div><figcaption>New plantings on the hillside, 70,000 plants and growing.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0547_2025_nepal_web_t4uvyg" alt="A worker turning drying coffee beans at the processing station" loading="lazy"></div><figcaption>Processing at origin, value kept in the valley.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_3367_2025_nepal_web_bgbpz3" alt="A woman laughs beside drying trays of coffee" loading="lazy"></div><figcaption>The drying trays, and the women who run them.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_2282_2025_nepal_web_l02va5" alt="Farmers planting rice together in a terraced paddy" loading="lazy"></div><figcaption>Livelihood is preservation: the valley working its own land.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_3246_2025_nepal_web_ey10ay" alt="Women sorting beans over wide woven trays" loading="lazy"></div><figcaption>Sorting the harvest, Nuwakot district.</figcaption></figure>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <span class="eyebrow">What Your Gift Funds</span>
+    <h2 style="max-width:700px;margin-left:0">Five commitments. One landscape.</h2>
+    <div class="cards">
+      <div class="card">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 18.5l6-10.4 3.9 6.1 2.6-4.1 5.9 8.4H2.8z"/><path d="M8.8 8.1l1.3-2.2 1.6 2.5"/></svg>
+        <span class="tag">Land</span>
+        <h3>Landscape protection</h3>
+        <p>Permanent protection of high-mountain forests and wildlife corridors, home to red pandas, Himalayan black bears, and 286 bird species.</p>
+      </div>
+      <div class="card">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 2.4v5.3c0 4.4-3 7.4-7 8.9-4-1.5-7-4.5-7-8.9V5.4L12 3z"/><path d="M9 12.1l2.1 2.1 4-4.4"/></svg>
+        <span class="tag">People · First priority</span>
+        <h3>Protection from trafficking</h3>
+        <p>Anti-trafficking programs, child sponsorship, and women's leadership through coffee cooperatives, so opportunity roots families at home.</p>
+      </div>
+      <div class="card">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.3C10.4 5 8.2 4.5 5.2 4.5v13.2c3 0 5.2.5 6.8 1.8 1.6-1.3 3.8-1.8 6.8-1.8V4.5c-3 0-5.2.5-6.8 1.8z"/><path d="M12 6.3v13.2"/></svg>
+        <span class="tag">Learning</span>
+        <h3>Education</h3>
+        <p>Building, equipping, and sustaining schools in remote mountain villages, with teacher support for children who would otherwise have no access.</p>
+      </div>
+      <div class="card">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.6"/><path d="M12 8.4v7.2M8.4 12h7.2"/></svg>
+        <span class="tag">Health</span>
+        <h3>Community health</h3>
+        <p>Rural health clinics serving mountain populations far from the nearest hospital.</p>
+      </div>
+      <div class="card">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5v-8"/><path d="M12 12.5c0-3.7 3-6.7 6.7-6.7 0 3.7-3 6.7-6.7 6.7z"/><path d="M12 12.5c0-3-2.5-5.5-5.5-5.5 0 3 2.5 5.5 5.5 5.5z"/></svg>
+        <span class="tag">Economy</span>
+        <h3>Livelihoods</h3>
+        <p>Income rooted in a standing forest: the coffee value chain, forest products, eco-tourism, and youth retention that creates local opportunity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="albumhead">
+      <div>
+        <span class="eyebrow">The Work, in Pictures</span>
+        <h2 style="margin-bottom:6px">The schools that keep a valley's children.</h2>
+      </div>
+      <span class="hint">Scroll →</span>
+    </div>
+  </div>
+  <div class="album">
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0509_2025_nepal_web_bil0vm" alt="A teacher and her class seated in a circle in a village classroom" loading="lazy"></div><figcaption>Morning circle at a village school in the mid-hills.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0596_2025_nepal_web_rgh6fp" alt="Smiling students in uniform at their desks" loading="lazy"></div><figcaption>Education is how a valley keeps its children.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0704_2025_nepal_web_zgo4ad" alt="Children waving in the schoolyard" loading="lazy"></div><figcaption>Built with the Nepal Green Tara Foundation.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0572_2025_nepal_web_h2mggh" alt="Students at work in their classroom" loading="lazy"></div><figcaption>Teacher support for villages far from any road.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5__2025_nepal_web-2_eleno9" alt="A classroom of young children seated with their teacher" loading="lazy"></div><figcaption>Sponsorship keeps children in school and out of the trafficking pipeline.</figcaption></figure>
+  </div>
+</section>
+
 <section>
   <div class="wrap narrow">
     <span class="eyebrow">Why a Gift Here Works Harder</span>
@@ -197,65 +341,6 @@
     <p>Donors here are the third kind of capital in a three-part architecture: a commercial company, an investment fund, and this foundation. Different capital, different motivations, the same mission underneath.</p>
   </div>
 </section>
-
-<figure class="band">
-  <img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_2000/p5_0183_2025_nepal_web_srojwu" alt="Freshly picked coffee cherries held in cupped hands, Nuwakot, Nepal" loading="lazy">
-  <figcaption><div class="wrap">Nuwakot district, Nepal. The harvest that changed the economics of a valley.</div></figcaption>
-</figure>
-
-<section>
-  <div class="wrap narrow">
-    <span class="eyebrow">The Origin</span>
-    <h2>It began with a woman who saw what the mountains were losing.</h2>
-    <p class="lead">In 2007, while Tashi Wangchuk Tenzing, grandson of Tenzing Norgay, was summiting Everest for the third time, his wife Bandi Nima Sherpa Tenzing stood above the terraced hills of Nuwakot district and saw something beyond the landscape: a community where human trafficking and emigration were draining families from the mountains.</p>
-    <p>She decided to change the economics. The Tenzings planted coffee. From that decision grew a farm that supports hundreds of families, and a nonprofit that builds schools, equips clinics, sponsors children, and runs anti-trafficking programs across the Himalaya.</p>
-    <p><strong>The coffee is the product. The protection is the purpose.</strong> The Mountain Preservation Foundation exists to carry that purpose to every great range, and protection from trafficking is the work we enter first.</p>
-  </div>
-</section>
-
-<section id="work">
-  <div class="wrap">
-    <span class="eyebrow">What Your Gift Funds</span>
-    <h2 class="narrow" style="margin-left:0">Five commitments. One landscape.</h2>
-    <div class="cards">
-      <div class="card">
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20l6.5-13 4 7 2.5-4.5L21 20z"/><circle cx="16.5" cy="6" r="1.6"/></svg>
-        <span class="tag">Land</span>
-        <h3>Corridor preservation</h3>
-        <p>Permanent protection of high-mountain forests and wildlife corridors, home to red pandas, Himalayan black bears, and 286 bird species.</p>
-      </div>
-      <div class="card">
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 2.5v5c0 4.5-3 7.8-7 9.5-4-1.7-7-5-7-9.5v-5L12 3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
-        <span class="tag">People · First priority</span>
-        <h3>Protection from trafficking</h3>
-        <p>Anti-trafficking programs, child sponsorship, and women's leadership through coffee cooperatives, so opportunity roots families at home.</p>
-      </div>
-      <div class="card">
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6c-2-1.4-4.5-2-8-2v14c3.5 0 6 .6 8 2 2-1.4 4.5-2 8-2V4c-3.5 0-6 .6-8 2z"/><path d="M12 6v14"/></svg>
-        <span class="tag">Learning</span>
-        <h3>Education</h3>
-        <p>Building, equipping, and sustaining schools in remote mountain villages, with teacher support for children who would otherwise have no access.</p>
-      </div>
-      <div class="card">
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8.5v7M8.5 12h7"/></svg>
-        <span class="tag">Health</span>
-        <h3>Community health</h3>
-        <p>Rural health clinics serving mountain populations far from the nearest hospital.</p>
-      </div>
-      <div class="card">
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M17 9h2.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3.5c-.6.8-.6 1.7 0 2.5M12 3c-.6.8-.6 1.7 0 2.5"/></svg>
-        <span class="tag">Economy</span>
-        <h3>Livelihoods</h3>
-        <p>Income rooted in a standing forest: the coffee value chain, forest products, eco-tourism, and youth retention that creates local opportunity.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<figure class="band">
-  <img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_2000/p5_0596_2025_nepal_web_rgh6fp" alt="Smiling students in uniform at their desks in a mountain village school in Nepal" loading="lazy">
-  <figcaption><div class="wrap">A village school in the Nepal mid-hills. Education is how a valley keeps its children.</div></figcaption>
-</figure>
 
 <section>
   <div class="wrap narrow">
@@ -279,26 +364,37 @@
       <div>
         <span class="eyebrow">The Flagship</span>
         <h2>92,000 hectares. Three parks. One corridor.</h2>
+        <p class="lead">Protecting one of the last continuous wildlife corridors between Everest and Makalu.</p>
         <p>The Foundation's flagship commitment reconnects Sagarmatha, Gaurishankar, and Makalu-Barun National Parks into one preserved landscape: the cultural homeland of Sherpa, Rai, and Tamang communities, and a watershed in the system that serves 1.35 billion people below.</p>
         <p><strong>$25 million over ten years</strong>, in five phases that end in a permanent endowment: community consultations and legal groundwork, full protected designation, carbon verification and agroforestry, value-added processing and research, and finally an endowed corridor whose protection no longer depends on anyone's annual generosity, including ours.</p>
         <p>The target: deforestation below 0.1% per year, down from a 1.8% baseline.</p>
       </div>
-      <img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_1100/Nepal-Coffee-Tashi_on7rne" alt="Tashi Wangchuk Tenzing inspecting washed coffee beans at the processing station" loading="lazy">
+      <figure style="margin:0">
+        <div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_1100,h_1240,f_auto,q_auto/p5__2025_nepal_web-3_mhw9wu" alt="Forested green hills of the Nepal mid-hills under monsoon light" loading="lazy"></div>
+        <figcaption style="font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:var(--ink-faint);padding-top:12px">The mid-hills above Kathmandu Valley. Where the forest holds, the village holds.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="split">
-      <img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_1100/p5_1342_2025_nepal_web_mwe4ow" alt="Two women harvesting among coffee trees in the Nepal mid-hills" loading="lazy">
+    <div class="albumhead">
       <div>
-        <span class="eyebrow">The Replication Thesis</span>
-        <h2>Nepal is the beginning.</h2>
-        <p>The corridor model is built to travel. Preservation partnerships are planned with Maasai communities at Mt Kenya and Amboseli in 2027, with highland cooperatives in Bolivia's Yungas and Caranavi cloud forests in 2027, and with cooperative unions in Ethiopia's Yirgacheffe and Sidama, the birthplace of coffee itself. Patagonia is named as a replication region from the start.</p>
-        <p>A gift here is not a gift to one valley. It is a gift to a model that makes standing forests worth more than cleared ones, on every continent where the great ranges rise.</p>
+        <span class="eyebrow">Born in the Himalaya, Built for Every Range</span>
+        <h2 style="margin-bottom:6px">Kenya is next.</h2>
       </div>
+      <span class="hint">Scroll →</span>
     </div>
+    <p class="narrow" style="margin-left:0;max-width:700px">Nepal is where we start, not where we stop. This is a ten-year replication roadmap of planned phases, not simultaneous launches: preservation partnerships with Maasai communities at Mt Kenya and Amboseli in 2027, highland cooperatives in Bolivia's Yungas in 2027, Ethiopia's Yirgacheffe and Sidama in the pipeline, and Patagonia named from the start. A gift here is a gift to a model that makes standing forests worth more than cleared ones, on every continent where the great ranges rise.</p>
+  </div>
+  <div class="album">
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0040_2025_kenya_web_wol8q3" alt="An elephant in golden morning light on the Kenyan savanna" loading="lazy"></div><figcaption>Amboseli at first light, from the 2025 origin expedition.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0896_2025_kenya_web_hh3qkv" alt="A herd of elephants crossing green wetland beneath the mountain" loading="lazy"></div><figcaption>The herds below Kilimanjaro's watershed.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0520_2025_kenya_web_h3t3oi" alt="The peaks of Mt Kenya rising over the highlands" loading="lazy"></div><figcaption>Mt Kenya's highlands, the next corridor conversation.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_1390_2025_kenya_web_pcufob" alt="Flamingos wading in a soda lake" loading="lazy"></div><figcaption>The Rift Valley lakes, fed by mountain water.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0167_2025_kenya_web_nnlrvj" alt="A lion resting in tall golden grass" loading="lazy"></div><figcaption>What a protected landscape keeps alive.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0409_2025_kenya_web_w7nw8v" alt="A lone elephant at dusk on open grassland" loading="lazy"></div><figcaption>Kenya, 2027. The model travels.</figcaption></figure>
   </div>
 </section>
 
@@ -330,25 +426,25 @@
         <div class="amt">$272</div>
         <h3>Protect a hectare</h3>
         <p>The flagship corridor works out to roughly $272 per hectare across the ten-year plan. One gift, one specific piece of the map, held.</p>
-        <span class="btn" style="opacity:.55;cursor:default" title="Giving details coming soon">Give a hectare</span>
+        <span class="btn gold" style="opacity:.55;cursor:default" title="Giving details coming soon">Give a hectare</span>
       </div>
       <div class="give">
         <div class="amt">Annual</div>
         <h3>The Annual Fund</h3>
         <p>Unrestricted support that lets the Foundation move where the need is greatest across the five programs, from corridor patrols to classroom roofs.</p>
-        <span class="btn" style="opacity:.55;cursor:default" title="Giving details coming soon">Give to the fund</span>
+        <span class="btn gold" style="opacity:.55;cursor:default" title="Giving details coming soon">Give to the fund</span>
       </div>
       <div class="give">
         <div class="amt">Named</div>
         <h3>Schools &amp; clinics</h3>
         <p>Sponsorship and naming opportunities for school construction, clinic equipment, teacher support, and child sponsorship through our program partners.</p>
-        <span class="btn" style="opacity:.55;cursor:default" title="Giving details coming soon">Ask about naming</span>
+        <span class="btn gold" style="opacity:.55;cursor:default" title="Giving details coming soon">Ask about naming</span>
       </div>
       <div class="give">
         <div class="amt">Legacy</div>
         <h3>The Endowment</h3>
         <p>Gifts that outlive all of us: endowment contributions, bequests, and beneficiary designations that make the corridor's protection permanent.</p>
-        <span class="btn" style="opacity:.55;cursor:default" title="Giving details coming soon">Build the endowment</span>
+        <span class="btn gold" style="opacity:.55;cursor:default" title="Giving details coming soon">Build the endowment</span>
       </div>
     </div>
     <p class="finequote">We gladly accept gifts by check, wire, donor-advised fund, qualified charitable distribution, and appreciated securities, and grants from private and family foundations. Contact details for giving will be published here shortly.</p>
@@ -366,17 +462,17 @@
   </div>
 </section>
 
-<figure class="band">
-  <img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_2000/p5__2025_everest_basecamp_nepal_pano_web_u6tusu" alt="Everest basecamp tents beneath the high peaks at midday" loading="lazy">
-  <figcaption><div class="wrap">Everest basecamp. The mountains hold what you give them.</div></figcaption>
+<figure class="band" style="margin-top:0">
+  <img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_2400/p5__2025_everest_basecamp_nepal_pano_web_u6tusu" alt="Everest basecamp tents beneath the high peaks at midday" loading="lazy">
+  <figcaption>Everest basecamp. The mountains hold what you give them.</figcaption>
 </figure>
 
 <section style="border-top:0">
-  <div class="wrap narrow" style="text-align:center">
+  <div class="wrap narrow center" style="text-align:center">
     <span class="eyebrow">An Invitation</span>
     <h2>The mountains hold what you give them.</h2>
     <p class="lead">If you have read this far, you are the kind of person this work was designed for. Write to us. We answer personally.</p>
-    <p style="margin-top:28px"><span class="btn" style="opacity:.55;cursor:default" title="Giving details coming soon">Start a conversation</span></p>
+    <p style="margin-top:30px"><span class="btn gold" style="opacity:.55;cursor:default" title="Giving details coming soon">Start a conversation</span></p>
   </div>
 </section>
 
@@ -388,7 +484,7 @@
     </a>
     <p>A Wyoming nonprofit corporation · 501(c)(3) application in preparation · EIN applied for<br>
     mountainpreservation.org</p>
-    <p>Photography from the field in Nepal. © 2026 Mountain Preservation Foundation. All rights reserved.</p>
+    <p>Photography from the field in Nepal and Kenya, from the Planet 5 expeditions. © 2026 Mountain Preservation Foundation. All rights reserved.</p>
   </div>
 </footer>
 
