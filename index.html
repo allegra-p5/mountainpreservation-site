@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mountain Preservation Foundation | Protect the World's Great Ranges</title>
+<meta name="description" content="A global foundation for the world's mountains: preserving the great ranges, protecting the people beneath them, and funding the corridors, schools, clinics, and livelihoods that keep both standing.">
+<!-- PRE-LAUNCH CHECKLIST (remove before public launch):
+     1. give@mountainpreservation.org mailbox must be created (all CTAs point to it).
+     2. EIN: replace "applied for" once issued.
+     3. Counsel review of the 501(c)(3) status + deductibility language (marked LEGAL below).
+     4. Online payment processor (foundation's own account, NOT Planet 5 Stripe) to replace mailto CTAs.
+     5. State charitable solicitation registrations before active solicitation campaigns.
+     6. Confirm final schools count with Green Tara before adding a number here (kept unnumbered on purpose).
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  html, body { margin: 0; padding: 0; }
+  img { max-width: 100%; }
+
+  :root {
+    --asphalt: #0E110E;
+    --panel: #0a0d0a;
+    --bone: #ECE7D8;
+    --bone-dim: #AEAC97;
+    --bone-faint: #857f6f;
+    --gold: #F4C227;
+    --hair: rgba(236, 231, 216, 0.14);
+  }
+
+  body {
+    background: var(--asphalt);
+    color: var(--bone);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .narrow { max-width: 720px; margin-left: auto; margin-right: auto; }
+
+  .eyebrow {
+    font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold);
+  }
+  h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; text-wrap: balance; }
+  .ico { stroke: var(--gold); fill: none; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* Nav */
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(14, 17, 14, 0.92); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--hair);
+  }
+  nav .bar { display: flex; align-items: center; gap: 18px; padding: 14px 24px; max-width: 1080px; margin: 0 auto; }
+  .wordmark { display: flex; align-items: center; gap: 10px; color: var(--bone); text-decoration: none; }
+  .wordmark .ico { width: 22px; height: 22px; }
+  .wordmark span { font-size: 12.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
+  nav .links { margin-left: auto; display: flex; align-items: center; gap: 22px; }
+  nav .links a { color: var(--bone-dim); text-decoration: none; font-size: 13.5px; }
+  nav .links a:hover { color: var(--bone); }
+  .btn {
+    display: inline-block; background: var(--gold); color: #171406;
+    font-weight: 600; font-size: 14px; letter-spacing: 0.02em;
+    padding: 11px 24px; border-radius: 3px; text-decoration: none;
+  }
+  .btn:hover { filter: brightness(1.06); }
+  .btn.ghost { background: transparent; color: var(--bone); border: 1px solid var(--hair); }
+  @media (max-width: 640px) { nav .links a:not(.btn) { display: none; } }
+
+  /* Hero */
+  .hero { position: relative; min-height: 88vh; display: flex; align-items: flex-end; overflow: hidden; }
+  .hero img.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+  .hero .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,17,14,0.25) 0%, rgba(14,17,14,0.55) 55%, rgba(14,17,14,0.96) 100%); }
+  .hero .inner { position: relative; padding: 120px 24px 72px; max-width: 1080px; margin: 0 auto; width: 100%; }
+  .hero h1 { font-size: clamp(34px, 6vw, 62px); line-height: 1.08; margin: 14px 0 18px; max-width: 17ch; }
+  .hero p { color: var(--bone-dim); font-size: clamp(16px, 2.2vw, 19px); max-width: 54ch; margin: 0 0 30px; }
+  .hero .ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+
+  /* Sections */
+  section { padding: 84px 0; border-top: 1px solid var(--hair); }
+  section .eyebrow { display: block; margin-bottom: 10px; }
+  h2 { font-size: clamp(28px, 4.4vw, 44px); line-height: 1.12; margin: 0 0 22px; }
+  p { margin: 0 0 18px; color: var(--bone-dim); }
+  p.lead { color: var(--bone); font-size: 18px; }
+  strong { color: var(--bone); }
+
+  .statgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1px; background: var(--hair); border: 1px solid var(--hair); margin-top: 36px; }
+  .stat { background: var(--panel); padding: 22px 20px; }
+  .stat .num { font-family: 'Playfair Display', serif; font-size: 30px; color: var(--gold); line-height: 1.15; font-variant-numeric: tabular-nums; }
+  .stat .what { font-size: 12.5px; color: var(--bone-faint); margin-top: 6px; line-height: 1.5; }
+
+  figure.band { margin: 0; position: relative; }
+  figure.band img { width: 100%; height: 62vh; object-fit: cover; display: block; }
+  figure.band figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 24px 18px; font-size: 12.5px; color: var(--bone-dim); background: linear-gradient(180deg, transparent, rgba(14,17,14,0.85)); }
+  figure.band figcaption .wrap { padding: 0; max-width: 1080px; margin: 0 auto; }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-top: 36px; }
+  .card { background: var(--panel); border: 1px solid var(--hair); padding: 26px 24px; }
+  .card .ico { width: 30px; height: 30px; display: block; margin-bottom: 16px; }
+  .card h3 { font-size: 19px; margin: 0 0 8px; }
+  .card .tag { font-size: 10.5px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--bone-faint); display: block; margin-bottom: 6px; }
+  .card p { font-size: 13.5px; line-height: 1.6; margin: 0; color: var(--bone-faint); }
+
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 8px; }
+  .split img { width: 100%; display: block; }
+  @media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
+
+  .rows { border: 1px solid var(--hair); margin-top: 36px; }
+  .row { display: flex; flex-wrap: wrap; gap: 6px 28px; padding: 20px 24px; border-top: 1px solid var(--hair); align-items: baseline; }
+  .row:first-child { border-top: 0; }
+  .row .k { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 14.5px; color: var(--bone); min-width: 230px; }
+  .row .k .ico { width: 20px; height: 20px; flex: none; }
+  .row .v { flex: 1; min-width: 260px; font-size: 14.5px; color: var(--bone-dim); }
+  @media (max-width: 640px) { .row .k, .row .v { flex-basis: 100%; min-width: 0; } }
+
+  /* Give */
+  #give { background: var(--panel); }
+  .give-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 36px; }
+  .give { background: var(--asphalt); border: 1px solid var(--hair); padding: 28px 26px; display: flex; flex-direction: column; }
+  .give .amt { font-family: 'Playfair Display', serif; font-size: 34px; color: var(--gold); }
+  .give h3 { font-size: 18px; margin: 6px 0 10px; }
+  .give p { font-size: 13.5px; color: var(--bone-faint); flex: 1; }
+  .give .btn { margin-top: 18px; text-align: center; }
+  .finequote { font-size: 12px; color: var(--bone-faint); margin-top: 26px; line-height: 1.65; }
+
+  /* Compliance + footer */
+  .legalblock { border: 1px solid var(--hair); padding: 28px 30px; margin-top: 44px; font-size: 13px; color: var(--bone-faint); line-height: 1.7; }
+  .legalblock h3 { font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--bone-dim); margin: 0 0 14px; }
+  .legalblock p { font-size: 13px; margin-bottom: 12px; color: var(--bone-faint); }
+  footer { border-top: 1px solid var(--hair); padding: 44px 0 60px; font-size: 12.5px; color: var(--bone-faint); }
+  footer .wordmark { margin-bottom: 14px; }
+  footer a { color: var(--bone-dim); }
+
+  @media (max-width: 640px) {
+    section { padding: 60px 0; }
+    .hero .inner { padding: 90px 24px 54px; }
+    figure.band img { height: 44vh; }
+  }
+  @media print {
+    nav, .btn { display: none; }
+    body { background: #fff; color: #1a1a1a; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="bar">
+    <a class="wordmark" href="#top">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20l6.5-13 4 7 2.5-4.5L21 20z"/><circle cx="16.5" cy="6" r="1.6"/></svg>
+      <span>Mountain Preservation</span>
+    </a>
+    <div class="links">
+      <a href="#gap">Why Mountains</a>
+      <a href="#work">The Work</a>
+      <a href="#corridor">The Corridor</a>
+      <a href="#accountability">Accountability</a>
+      <a class="btn" href="#give">Donate</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <img class="bg" src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_2000/Nepal-Expedition-Mountain-Preservation_vxqekg" alt="A herder leads loaded yaks toward the high peaks of the Nepal Himalaya" fetchpriority="high">
+  <div class="scrim"></div>
+  <div class="inner">
+    <span class="eyebrow">Mountain Preservation Foundation</span>
+    <h1>Commerce holds the line. Your gift builds the corridor.</h1>
+    <p>A global foundation for the world's mountains: preserving the great ranges, protecting the people beneath them, and funding the corridors, schools, clinics, and livelihoods that keep both standing.</p>
+    <div class="ctas">
+      <a class="btn" href="#give">Give now</a>
+      <a class="btn ghost" href="#gap">Read the case</a>
+    </div>
+  </div>
+</header>
+
+<section id="gap">
+  <div class="wrap narrow">
+    <span class="eyebrow">Why Mountains</span>
+    <h2>Mountains have had silence.</h2>
+    <p class="lead">Mountains supply fresh water to roughly half of humanity. Two billion people live in and below them. One in three mountain species faces extinction. Yet the great ranges receive a fraction of the philanthropic attention given to oceans and rainforests.</p>
+    <p>There is no global institution whose sole mandate is the preservation of mountain landscapes and mountain communities together. The Mountain Preservation Foundation exists to be that institution: born in the Nepal Himalaya, built for every range on Earth.</p>
+  </div>
+  <div class="wrap">
+    <div class="statgrid">
+      <div class="stat"><div class="num">50%</div><div class="what">of humanity depends on fresh water that begins in the mountains</div></div>
+      <div class="stat"><div class="num">2B</div><div class="what">people live in and below the world's mountain regions</div></div>
+      <div class="stat"><div class="num">1 in 3</div><div class="what">mountain species faces extinction</div></div>
+      <div class="stat"><div class="num">92,000 ha</div><div class="what">our flagship corridor across three Himalayan national parks</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <span class="eyebrow">Why a Gift Here Works Harder</span>
+    <h2>Your dollar goes to the mountain, not the machine.</h2>
+    <p class="lead">Most environmental nonprofits spend a third of every year raising the money that keeps the lights on. This foundation is built differently.</p>
+    <p>A commercial engine, the Guardian Program built by Planet 5, commits 20% of its membership revenue to the Foundation as permanent structural funding. That commitment covers the engine of the organization, so philanthropic gifts are not consumed by overhead and fundraising cycles. <strong>Commerce holds the line. Catalytic gifts build what commerce alone cannot:</strong> the corridor, the schools, the clinics, and the endowment that makes protection permanent.</p>
+    <p>Donors here are the third kind of capital in a three-part architecture: a commercial company, an investment fund, and this foundation. Different capital, different motivations, the same mission underneath.</p>
+  </div>
+</section>
+
+<figure class="band">
+  <img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_2000/p5_0183_2025_nepal_web_srojwu" alt="Freshly picked coffee cherries held in cupped hands, Nuwakot, Nepal" loading="lazy">
+  <figcaption><div class="wrap">Nuwakot district, Nepal. The harvest that changed the economics of a valley.</div></figcaption>
+</figure>
+
+<section>
+  <div class="wrap narrow">
+    <span class="eyebrow">The Origin</span>
+    <h2>It began with a woman who saw what the mountains were losing.</h2>
+    <p class="lead">In 2007, while Tashi Wangchuk Tenzing, grandson of Tenzing Norgay, was summiting Everest for the third time, his wife Bandi Nima Sherpa Tenzing stood above the terraced hills of Nuwakot district and saw something beyond the landscape: a community where human trafficking and emigration were draining families from the mountains.</p>
+    <p>She decided to change the economics. The Tenzings planted coffee. From that decision grew a farm that supports hundreds of families, and a nonprofit that builds schools, equips clinics, sponsors children, and runs anti-trafficking programs across the Himalaya.</p>
+    <p><strong>The coffee is the product. The protection is the purpose.</strong> The Mountain Preservation Foundation exists to carry that purpose to every great range, and protection from trafficking is the work we enter first.</p>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <span class="eyebrow">What Your Gift Funds</span>
+    <h2 class="narrow" style="margin-left:0">Five commitments. One landscape.</h2>
+    <div class="cards">
+      <div class="card">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20l6.5-13 4 7 2.5-4.5L21 20z"/><circle cx="16.5" cy="6" r="1.6"/></svg>
+        <span class="tag">Land</span>
+        <h3>Corridor preservation</h3>
+        <p>Permanent protection of high-mountain forests and wildlife corridors, home to red pandas, Himalayan black bears, and 286 bird species.</p>
+      </div>
+      <div class="card">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 2.5v5c0 4.5-3 7.8-7 9.5-4-1.7-7-5-7-9.5v-5L12 3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
+        <span class="tag">People · First priority</span>
+        <h3>Protection from trafficking</h3>
+        <p>Anti-trafficking programs, child sponsorship, and women's leadership through coffee cooperatives, so opportunity roots families at home.</p>
+      </div>
+      <div class="card">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6c-2-1.4-4.5-2-8-2v14c3.5 0 6 .6 8 2 2-1.4 4.5-2 8-2V4c-3.5 0-6 .6-8 2z"/><path d="M12 6v14"/></svg>
+        <span class="tag">Learning</span>
+        <h3>Education</h3>
+        <p>Building, equipping, and sustaining schools in remote mountain villages, with teacher support for children who would otherwise have no access.</p>
+      </div>
+      <div class="card">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8.5v7M8.5 12h7"/></svg>
+        <span class="tag">Health</span>
+        <h3>Community health</h3>
+        <p>Rural health clinics serving mountain populations far from the nearest hospital.</p>
+      </div>
+      <div class="card">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M17 9h2.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3.5c-.6.8-.6 1.7 0 2.5M12 3c-.6.8-.6 1.7 0 2.5"/></svg>
+        <span class="tag">Economy</span>
+        <h3>Livelihoods</h3>
+        <p>Income rooted in a standing forest: the coffee value chain, forest products, eco-tourism, and youth retention that creates local opportunity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<figure class="band">
+  <img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_2000/p5_0596_2025_nepal_web_rgh6fp" alt="Smiling students in uniform at their desks in a mountain village school in Nepal" loading="lazy">
+  <figcaption><div class="wrap">A village school in the Nepal mid-hills. Education is how a valley keeps its children.</div></figcaption>
+</figure>
+
+<section>
+  <div class="wrap narrow">
+    <span class="eyebrow">Proof at Source</span>
+    <h2>This work is not a proposal. It is already underway.</h2>
+    <p class="lead">The Foundation formalizes and scales a record built over nearly two decades in Nepal by Nuwa Estate and partner organizations, including the Nepal Green Tara Foundation.</p>
+  </div>
+  <div class="wrap">
+    <div class="statgrid">
+      <div class="stat"><div class="num">25,000+</div><div class="what">residents reached through rural health clinics</div></div>
+      <div class="stat"><div class="num">4,500+</div><div class="what">students reached through schools built and upgraded with partners</div></div>
+      <div class="stat"><div class="num">432</div><div class="what">farming households directly supported, with 1,028 more supported indirectly</div></div>
+      <div class="stat"><div class="num">70,000</div><div class="what">organic arabica plants cultivated at altitude</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="corridor">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <span class="eyebrow">The Flagship</span>
+        <h2>92,000 hectares. Three parks. One corridor.</h2>
+        <p>The Foundation's flagship commitment reconnects Sagarmatha, Gaurishankar, and Makalu-Barun National Parks into one preserved landscape: the cultural homeland of Sherpa, Rai, and Tamang communities, and a watershed in the system that serves 1.35 billion people below.</p>
+        <p><strong>$25 million over ten years</strong>, in five phases that end in a permanent endowment: community consultations and legal groundwork, full protected designation, carbon verification and agroforestry, value-added processing and research, and finally an endowed corridor whose protection no longer depends on anyone's annual generosity, including ours.</p>
+        <p>The target: deforestation below 0.1% per year, down from a 1.8% baseline.</p>
+      </div>
+      <img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_1100/Nepal-Coffee-Tashi_on7rne" alt="Tashi Wangchuk Tenzing inspecting washed coffee beans at the processing station" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="split">
+      <img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_1100/p5_1342_2025_nepal_web_mwe4ow" alt="Two women harvesting among coffee trees in the Nepal mid-hills" loading="lazy">
+      <div>
+        <span class="eyebrow">The Replication Thesis</span>
+        <h2>Nepal is the beginning.</h2>
+        <p>The corridor model is built to travel. Preservation partnerships are planned with Maasai communities at Mt Kenya and Amboseli in 2027, with highland cooperatives in Bolivia's Yungas and Caranavi cloud forests in 2027, and with cooperative unions in Ethiopia's Yirgacheffe and Sidama, the birthplace of coffee itself. Patagonia is named as a replication region from the start.</p>
+        <p>A gift here is not a gift to one valley. It is a gift to a model that makes standing forests worth more than cleared ones, on every continent where the great ranges rise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="accountability">
+  <div class="wrap narrow">
+    <span class="eyebrow">Accountability</span>
+    <h2>We measure what we promise.</h2>
+    <p class="lead">Every commitment on this page is designed to be verified by people who are not us.</p>
+  </div>
+  <div class="wrap">
+    <div class="rows">
+      <div class="row"><span class="k"><svg class="ico" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></svg>Independent monitoring</span><span class="v">Satellite imagery, community-led patrols with smartphone reporting, and third-party verification, published to a public dashboard.</span></div>
+      <div class="row"><span class="k"><svg class="ico" viewBox="0 0 24 24"><path d="M3 9l9-5.5L21 9M4.5 9v8M9.5 9v8M14.5 9v8M19.5 9v8M3 20h18"/></svg>Governance</span><span class="v">A majority-independent board, arms-length written agreements with any commercial partner, and separate books and audit.</span></div>
+      <div class="row"><span class="k"><svg class="ico" viewBox="0 0 24 24"><path d="M12 6c-2-1.4-4.5-2-8-2v14c3.5 0 6 .6 8 2 2-1.4 4.5-2 8-2V4c-3.5 0-6 .6-8 2z"/><path d="M12 6v14"/></svg>Transparency</span><span class="v">Annual reports, IRS Form 990 filings, and audited financial statements will be published on this site every year.</span></div>
+      <div class="row"><span class="k"><svg class="ico" viewBox="0 0 24 24"><path d="M12 20s-7-4.5-9-9a4.9 4.9 0 0 1 9-2.4A4.9 4.9 0 0 1 21 11c-2 4.5-9 9-9 9z"/></svg>Donor intent</span><span class="v">Designated gifts are applied to the designated program. If a program becomes fully funded, we apply the balance to the closest related need and tell you we did.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="give">
+  <div class="wrap narrow">
+    <span class="eyebrow">Ways to Give</span>
+    <h2>Tangible acres. Real classrooms. Permanent protection.</h2>
+    <p class="lead">Every level of giving maps to something you can point to on a map or walk into on the ground.</p>
+  </div>
+  <div class="wrap">
+    <div class="give-cards">
+      <div class="give">
+        <div class="amt">$272</div>
+        <h3>Protect a hectare</h3>
+        <p>The flagship corridor works out to roughly $272 per hectare across the ten-year plan. One gift, one specific piece of the map, held.</p>
+        <a class="btn" href="mailto:give@mountainpreservation.org?subject=Protect%20a%20Hectare">Give a hectare</a>
+      </div>
+      <div class="give">
+        <div class="amt">Annual</div>
+        <h3>The Annual Fund</h3>
+        <p>Unrestricted support that lets the Foundation move where the need is greatest across the five programs, from corridor patrols to classroom roofs.</p>
+        <a class="btn" href="mailto:give@mountainpreservation.org?subject=Annual%20Fund%20Gift">Give to the fund</a>
+      </div>
+      <div class="give">
+        <div class="amt">Named</div>
+        <h3>Schools &amp; clinics</h3>
+        <p>Sponsorship and naming opportunities for school construction, clinic equipment, teacher support, and child sponsorship through our program partners.</p>
+        <a class="btn" href="mailto:give@mountainpreservation.org?subject=Schools%20and%20Clinics">Ask about naming</a>
+      </div>
+      <div class="give">
+        <div class="amt">Legacy</div>
+        <h3>The Endowment</h3>
+        <p>Gifts that outlive all of us: endowment contributions, bequests, and beneficiary designations that make the corridor's protection permanent.</p>
+        <a class="btn" href="mailto:give@mountainpreservation.org?subject=Endowment%20and%20Legacy">Build the endowment</a>
+      </div>
+    </div>
+    <p class="finequote">We gladly accept gifts by check, wire, donor-advised fund, qualified charitable distribution, and appreciated securities, and grants from private and family foundations. Write to <a href="mailto:give@mountainpreservation.org" style="color:var(--gold)">give@mountainpreservation.org</a> and we will send instructions the same day. Online giving is coming soon.</p>
+
+    <!-- LEGAL: counsel must review this block before public launch -->
+    <div class="legalblock">
+      <h3>Tax &amp; Legal Information for Donors</h3>
+      <p><strong>Status.</strong> Mountain Preservation Foundation is a Wyoming nonprofit corporation. Our application for recognition of federal tax exemption under Section 501(c)(3) of the Internal Revenue Code is in preparation. Our Employer Identification Number has been applied for and will be published here when issued.</p>
+      <p><strong>Deductibility.</strong> Until the IRS issues our determination letter, we cannot guarantee that contributions are tax-deductible. If recognition is granted, the IRS generally treats exemption as effective retroactively to our date of incorporation when the application is filed within the required period, which would make gifts made after incorporation deductible. Please consult your own tax advisor before making a gift, and ask us for our current status at any time.</p>
+      <p><strong>Acknowledgments.</strong> Every donor receives a written acknowledgment. No goods or services are provided in exchange for contributions; gifts to the Foundation carry no membership benefits, discounts, or products from any affiliated company.</p>
+      <p><strong>Use of funds.</strong> Gifts are unrestricted unless a designation is agreed in writing. Designated gifts are applied to the designated program; if a program is fully funded, the balance is applied to the nearest related charitable need.</p>
+      <p><strong>Solicitation.</strong> We solicit contributions only where lawful and will complete state charitable solicitation registrations where required. Nothing on this page is an offer of investment or a promise of financial return.</p>
+      <p><strong>Privacy.</strong> We do not sell, rent, or trade donor information, ever.</p>
+    </div>
+  </div>
+</section>
+
+<figure class="band">
+  <img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_2000/p5__2025_everest_basecamp_nepal_pano_web_u6tusu" alt="Everest basecamp tents beneath the high peaks at midday" loading="lazy">
+  <figcaption><div class="wrap">Everest basecamp. The mountains hold what you give them.</div></figcaption>
+</figure>
+
+<section style="border-top:0">
+  <div class="wrap narrow" style="text-align:center">
+    <span class="eyebrow">An Invitation</span>
+    <h2>The mountains hold what you give them.</h2>
+    <p class="lead">If you have read this far, you are the kind of person this work was designed for. Write to us. We answer personally.</p>
+    <p style="margin-top:28px"><a class="btn" href="mailto:give@mountainpreservation.org?subject=I%20want%20to%20help">Start a conversation</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="wordmark" href="#top">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20l6.5-13 4 7 2.5-4.5L21 20z"/><circle cx="16.5" cy="6" r="1.6"/></svg>
+      <span>Mountain Preservation Foundation</span>
+    </a>
+    <p>A Wyoming nonprofit corporation · 501(c)(3) application in preparation · EIN applied for<br>
+    give@mountainpreservation.org · mountainpreservation.org</p>
+    <p>Photography from the field in Nepal. © 2026 Mountain Preservation Foundation. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
