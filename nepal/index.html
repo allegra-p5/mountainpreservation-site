@@ -65,6 +65,17 @@
   .stat .num::after { content: ""; display: block; width: 26px; height: 2px; background: var(--gold); margin-top: 10px; }
   .stat .what { font-size: 12.5px; color: var(--ink-faint); margin-top: 10px; line-height: 1.55; }
   .finequote { font-size: 12.5px; color: var(--ink-faint); margin-top: 28px; line-height: 1.7; }
+  .unit .ph { margin: -28px -26px 18px; }
+  .unit .ph img { width: calc(100% + 0px); height: 210px; object-fit: cover; display: block; }
+  .album { margin-top: 40px; display: flex; gap: 22px; overflow-x: auto; padding: 4px 28px 26px; scroll-snap-type: x mandatory; }
+  .album::-webkit-scrollbar { height: 6px; }
+  .album::-webkit-scrollbar-thumb { background: var(--hair); border-radius: 3px; }
+  .album figure { flex: 0 0 340px; margin: 0; scroll-snap-align: start; }
+  .album .frame { background: var(--card); border: 1px solid var(--hair); padding: 12px; box-shadow: 0 10px 28px rgba(31,35,30,0.07); }
+  .album img { display: block; width: 100%; height: 236px; object-fit: cover; }
+  .album figcaption { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 14px; color: var(--ink-faint); padding: 12px 4px 0; line-height: 1.5; }
+  .albumhead { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; }
+  .albumhead .hint { margin-left: auto; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); }
   footer { border-top: 1px solid var(--hair); padding: 44px 0 60px; font-size: 12.5px; color: var(--ink-faint); }
   @media (max-width: 640px) { section { padding: 56px 0; } .hero { padding: 56px 20px 40px; } figure.band img { height: 44vh; } }
 </style>
@@ -88,7 +99,7 @@
 <header class="hero">
   <span class="eyebrow urgent">Nepal Flood Relief &middot; Trishuli Valley &middot; August 2026</span>
   <h1>The valley where our work began is underwater.</h1>
-  <p class="lead">On August 26, a glacial collapse in Tibet sent a wall of water and debris down the Bhotekoshi and the Trishuli, through Rasuwa, Nuwakot, and six more districts. More than 1,000 people are confirmed dead, at least 51 of them in Nuwakot, and nearly 4,000 are still missing. These are the villages our coffee comes from: Nuwa Estate, the schools its harvests help fund, and the farming families who have worked that land since 2007.</p>
+  <p class="lead">On August 26, a glacial collapse in Tibet sent a wall of water and debris down the Bhotekoshi and the Trishuli, through Rasuwa, Nuwakot, and six more districts. More than 1,000 people are confirmed dead, at least 51 of them in Nuwakot, and nearly 4,000 are still missing. These are the villages our coffee comes from: home of Nuwa Estate, our partner on this land, and the farming families Nuwa has known by name since 2007. They are the people we work with and support.</p>
   <p class="sub">Our partners have worked in this valley for decades, and our commitment to it will outlast the cameras. In October, we will be on the ground ourselves, documenting the mountain regions of Nepal: the people, the villages, and the rebuilding.</p>
   <a class="btn" href="#give">How to stand with the valley</a>
 </header>
@@ -126,6 +137,28 @@
   </div>
 </section>
 
+<section id="region">
+  <div class="wrap">
+    <div class="albumhead">
+      <div>
+        <span class="eyebrow">The Region</span>
+        <h2 style="margin-bottom:6px">The people and the land.</h2>
+      </div>
+      <span class="hint">Scroll &rarr;</span>
+    </div>
+  </div>
+  <div class="album">
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0183_2025_nepal_web_srojwu" alt="Freshly picked coffee cherries held in cupped hands, Nuwakot" loading="lazy"></div><figcaption>The Nuwakot harvest, in the hands that grow it.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_1005_2025_nepal_web_yv738b" alt="Hands picking ripe coffee cherries from the branch" loading="lazy"></div><figcaption>Shade-grown arabica, picked by hand at altitude.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0957_2025_nepal_web_ouljyv" alt="A grower greets the camera among coffee trees" loading="lazy"></div><figcaption>The growers of Nuwakot, Nuwa Estate&#8217;s community.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_1013_2025_nepal_web_me0azz" alt="Rows of young coffee plants under prayer flags" loading="lazy"></div><figcaption>New plantings under prayer flags on the hillside.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0509_2025_nepal_web_bil0vm" alt="A teacher and her class seated in a circle in a village classroom" loading="lazy"></div><figcaption>Morning circle at a village school in the district.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0704_2025_nepal_web_zgo4ad" alt="Children waving in a schoolyard" loading="lazy"></div><figcaption>The schoolyard, the valley&#8217;s future.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_2282_2025_nepal_web_l02va5" alt="Farmers planting rice together in a terraced paddy" loading="lazy"></div><figcaption>The valley working its own land.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_3367_2025_nepal_web_bgbpz3" alt="A woman laughing beside drying trays of coffee" loading="lazy"></div><figcaption>The drying trays, and the women who run them.</figcaption></figure>
+  </div>
+</section>
+
 <section id="commerce">
   <div class="wrap narrow">
     <span class="eyebrow">Our Philosophy</span>
@@ -144,12 +177,14 @@
   <div class="wrap">
     <div class="units">
       <div class="unit">
+        <div class="ph"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_420,f_auto,q_auto/p5_0596_2025_nepal_web_rgh6fp" alt="Smiling schoolchildren at their desks in a Nuwakot village school" loading="lazy"></div>
         <div class="amt">Give</div>
         <h3>The Nepal Flood Recovery Fund</h3>
         <p>Applied where the need on the ground is greatest. The first $10,000 is matched, the majority of the fund is granted directly in the valley, and every dollar is publicly accounted for. Giving opens this week; pledge now and you will have the link first.</p>
         <a class="btn" href="mailto:allegra@planet5media.com?subject=Nepal%20Flood%20Recovery%20Fund%20pledge">Pledge to the fund</a>
       </div>
       <div class="unit">
+        <div class="ph"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_420,f_auto,q_auto/v1777309251/IMG_2045_x4so6y.png" alt="Everest Coffee Company bag" loading="lazy"></div>
         <div class="amt">Buy</div>
         <h3>The valley's coffee</h3>
         <p>Pre-order Everest Coffee, grown at Nuwa Estate in Nuwakot. Every bag is income earned in the district, harvest after harvest. This is the long-term answer.</p>
