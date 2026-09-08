@@ -73,6 +73,8 @@
   .btn.gold { background: var(--gold); color: #171406; font-weight: 600; }
   .btn.gold:hover { filter: brightness(1.05); }
   .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+  .give-btns { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 34px; }
+  .give-btns .btn { padding: 13px 22px; }
   @media (max-width: 680px) { nav .links a:not(.btn) { display: none; } }
 
   /* Hero: editorial, type-first */
@@ -187,7 +189,7 @@
       <a href="#work">The Work</a>
       <a href="#corridor">The Corridor</a>
       <a href="#accountability">Accountability</a>
-      <a class="btn gold" href="#give">Donate</a>
+      <a class="btn gold" href="/give/">Donate</a>
     </div>
   </div>
 </nav>
@@ -204,7 +206,7 @@
   <h1>Every great range, preserved by the people who live beneath it.</h1>
   <p>The world's first permanent institution dedicated entirely to mountain ecosystems and the communities who protect them. Born in the Nepal Himalaya, built for every range on Earth.</p>
   <div class="ctas">
-    <a class="btn gold" href="#give">Give now</a>
+    <a class="btn gold" href="/give/">Give now</a>
     <a class="btn ghost" href="#gap">Read the case</a>
   </div>
 </header>
@@ -428,7 +430,13 @@
     <h2>Give directly to the mission.</h2>
     <p class="lead">The Foundation accepts direct gifts only. No memberships, no products, no intermediaries: every donation goes to the work in the mountains.</p>
     <p>Your gift funds the protection of mountain landscapes and the schools, clinics, and anti-trafficking programs that keep mountain families together. We accept gifts by check, wire, donor-advised fund, and appreciated securities.</p>
-    <p style="margin-top:34px"><a class="btn gold" href="https://donate.stripe.com/28E14m48k60q1Q29801Fe04">Donate</a></p>
+    <div class="give-btns">
+      <a class="btn gold" href="https://donate.stripe.com/00w7sKeMY74ucuG2JC1Fe05">Give $100</a>
+      <a class="btn gold" href="https://donate.stripe.com/8x2dR8eMYdsS1Q2esk1Fe06">Give $500</a>
+      <a class="btn gold" href="https://donate.stripe.com/00wbJ020c1Ka66i9801Fe07">Give $1,000</a>
+      <a class="btn ghost" href="https://donate.stripe.com/28E14m48k60q1Q29801Fe04">Any amount</a>
+    </div>
+    <p style="margin-top:16px;font-size:13.5px"><a href="/give/" style="color:var(--gold-deep)">All giving options, including the Nepal Flood Recovery Fund &rarr;</a></p>
     <p class="finequote">Secure online giving by Stripe; card, Apple Pay, and Google Pay. For gifts by check, wire, donor-advised fund, or appreciated securities, <a href="mailto:allegra@planet5media.com?subject=Mountain%20Preservation%20Foundation%20gift">email us</a>.</p>
 
     <!-- LEGAL: compressed 2026-08-13 per Allegra (full six-paragraph version in index.html.bak-20260805 and git history); counsel to confirm final wording before public launch -->
