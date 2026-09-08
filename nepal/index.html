@@ -59,6 +59,10 @@
   .unit h3 { font-size: 17.5px; margin: 14px 0 10px; }
   .unit p { font-size: 13.5px; color: var(--ink-soft); flex: 1; }
   .unit .btn { margin-top: 18px; text-align: center; }
+  .give-btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+  .give-btns .btn { margin-top: 0; padding: 13px 22px; }
+  .give-btns .btn.alt { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+  .give-note { font-size: 13px; color: var(--ink-soft); margin-top: 12px; }
   .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1px; background: var(--hair); border: 1px solid var(--hair); margin-top: 40px; }
   .stat { background: var(--card); padding: 26px 22px; }
   .stat .num { font-family: 'Playfair Display', serif; font-size: 30px; color: var(--ink); font-variant-numeric: tabular-nums; }
@@ -91,7 +95,7 @@
 </nav>
 
 <div class="matchbar">
-  <div class="inner"><b>OPENING THIS WEEK</b><span>Online giving to the Nepal Flood Recovery Fund opens this week.</span></div>
+  <div class="inner"><b>GIVING IS OPEN</b><span>Online giving to the Nepal Flood Recovery Fund is open. Every gift is receipted by email.</span></div>
 </div>
 
 <header class="hero">
@@ -178,8 +182,14 @@
         <div class="ph"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_420,f_auto,q_auto/p5_0596_2025_nepal_web_rgh6fp" alt="Smiling schoolchildren at their desks in a Nuwakot village school" loading="lazy"></div>
         <div class="amt">Give</div>
         <h3>The Nepal Flood Recovery Fund</h3>
-        <p>Applied where the need on the ground is greatest. The fund is used to help the valley recover and rebuild, and every dollar is publicly accounted for. Online giving opens this week.</p>
-        <a class="btn" href="mailto:allegra@planet5media.com?subject=Nepal%20Flood%20Recovery%20Fund%20pledge">Pledge to the fund</a>
+        <p>Applied where the need on the ground is greatest. The fund is used to help the valley recover and rebuild, and every dollar is publicly accounted for.</p>
+        <div class="give-btns">
+          <a class="btn" href="https://donate.stripe.com/28EaEWawIcoOeCO3NG1Fe01">Give $50</a>
+          <a class="btn" href="https://donate.stripe.com/dRmfZg8oAcoO52eckc1Fe02">Give $150</a>
+          <a class="btn" href="https://donate.stripe.com/5kQfZgbAM9cC66i2JC1Fe03">Give $500</a>
+          <a class="btn alt" href="https://donate.stripe.com/4gM3cu9sE0G67ambg81Fe00">Any amount</a>
+        </div>
+        <p class="give-note">Secure checkout by Stripe; card, Apple Pay, and Google Pay. For gifts by check or wire, or gifts of $5,000 or more, <a href="mailto:allegra@planet5media.com?subject=Nepal%20Flood%20Recovery%20Fund%20gift">email us</a>.</p>
       </div>
       <div class="unit">
         <div class="ph"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_420,f_auto,q_auto/v1777309251/IMG_2045_x4so6y.png" alt="Everest Coffee Company bag" loading="lazy"></div>
@@ -235,7 +245,7 @@
     <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_4095_2025_nepal_web_lfmxgm" alt="A tractor on a valley road under a monsoon sky" loading="lazy"></div><figcaption>The road through the valley, monsoon sky.</figcaption></figure>
   </div>
   <div class="wrap" style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
-    <a class="btn" href="mailto:allegra@planet5media.com?subject=Nepal%20Flood%20Recovery%20Fund%20pledge">Pledge to the fund</a>
+    <a class="btn" href="https://donate.stripe.com/4gM3cu9sE0G67ambg81Fe00">Give to the fund</a>
     <a class="btn" href="https://www.planet5media.com/coffee" target="_blank" rel="noopener" style="background:transparent;color:var(--ink);border:1px solid var(--ink)">Pre-order the coffee</a>
   </div>
 </section>
