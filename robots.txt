@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mountainpreservation.org/sitemap.xml
