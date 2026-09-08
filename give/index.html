@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Give | Mountain Preservation Foundation</title>
+<meta name="description" content="Give directly to the Mountain Preservation Foundation: the Nepal Flood Recovery Fund and the Mountain Preservation Fund. Secure online giving by Stripe.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mountain Preservation Foundation">
+<meta property="og:title" content="Give | Mountain Preservation Foundation">
+<meta property="og:description" content="Direct gifts only. No memberships, no products, no intermediaries: every donation goes to the work in the mountains.">
+<meta property="og:image" content="https://res.cloudinary.com/planet5/image/upload/c_fill,g_auto,w_1200,h_630,f_jpg,q_auto/Nepal-Expedition-Mountain-Preservation_vxqekg">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 20l6.5-13 4 7 2.5-4.5L21 20z' fill='none' stroke='%23F4C227' stroke-width='1.8' stroke-linejoin='round'/%3E%3Ccircle cx='16.5' cy='6' r='1.6' fill='%23F4C227'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  img { max-width: 100%; }
+  :root {
+    --paper: #FFFFFF; --card: #FFFFFF; --ink: #1F231E; --ink-soft: #5E6157;
+    --ink-faint: #8B8B7E; --hair: rgba(31,35,30,0.14); --gold: #F4C227; --gold-deep: #8F6E14;
+    --urgent: #8E2F1F;
+  }
+  body { background: var(--paper); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; font-size: 16.5px; line-height: 1.75; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+  .narrow { max-width: 700px; margin-left: auto; margin-right: auto; }
+  .eyebrow { font-size: 11.5px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-deep); display: block; margin-bottom: 12px; }
+  .eyebrow.urgent { color: var(--urgent); }
+  h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 500; text-wrap: balance; color: var(--ink); }
+  nav { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.94); backdrop-filter: blur(10px); border-bottom: 1px solid var(--hair); }
+  nav .bar { display: flex; align-items: center; gap: 18px; padding: 16px 28px; max-width: 1120px; margin: 0 auto; }
+  .wordmark { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; }
+  .wordmark svg { width: 22px; height: 22px; stroke: var(--gold-deep); fill: none; stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round; }
+  .wordmark span { font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; }
+  nav .links { margin-left: auto; display: flex; align-items: center; gap: 26px; }
+  nav .links a { color: var(--ink-soft); text-decoration: none; font-size: 13.5px; }
+  nav .links a:hover { color: var(--ink); }
+  .btn { display: inline-block; background: var(--gold); color: #171406; font-weight: 600; font-size: 14px; letter-spacing: 0.04em; padding: 13px 30px; border-radius: 2px; text-decoration: none; }
+  .btn:hover { filter: brightness(1.05); }
+  .btn.alt { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+  .btn.alt:hover { background: var(--ink); color: var(--paper); filter: none; }
+  @media (max-width: 680px) { nav .links a:not(.btn) { display: none; } }
+  .hero { padding: 84px 28px 48px; max-width: 1120px; margin: 0 auto; text-align: center; }
+  .hero h1 { font-size: clamp(36px, 5.8vw, 66px); line-height: 1.08; margin: 0 auto 24px; max-width: 20ch; }
+  .hero p.lead { color: var(--ink); font-size: clamp(17px, 2vw, 20px); max-width: 60ch; margin: 0 auto 10px; }
+  .hero p.sub { color: var(--ink-soft); max-width: 60ch; margin: 0 auto; }
+  section { padding: 40px 0 76px; }
+  section + section { border-top: 1px solid var(--hair); padding-top: 76px; }
+  h2 { font-size: clamp(27px, 4vw, 42px); line-height: 1.12; margin: 0 0 22px; }
+  p { margin: 0 0 18px; color: var(--ink-soft); }
+  p.lead { color: var(--ink); font-size: 18.5px; }
+  .funds { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
+  .fund { background: var(--card); border: 1px solid var(--hair); padding: 30px 28px; display: flex; flex-direction: column; box-shadow: 0 10px 28px rgba(31,35,30,0.05); }
+  .fund .ph { margin: -30px -28px 22px; }
+  .fund .ph img { width: 100%; height: 240px; object-fit: cover; display: block; }
+  .fund h2 { font-size: 26px; margin: 6px 0 10px; }
+  .fund p { font-size: 15px; flex: 1; }
+  .fund .more { font-size: 13.5px; color: var(--gold-deep); text-decoration: none; }
+  .give-btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .give-btns .btn { padding: 13px 22px; }
+  .give-note { font-size: 13px; color: var(--ink-soft); margin: 14px 0 0; }
+  .ways { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px; background: var(--hair); border: 1px solid var(--hair); margin-top: 34px; }
+  .way { background: var(--card); padding: 26px 22px; }
+  .way h3 { font-size: 16px; margin: 0 0 8px; }
+  .way p { font-size: 13.5px; margin: 0; }
+  .finequote { font-size: 12.5px; color: var(--ink-faint); margin-top: 28px; line-height: 1.7; }
+  footer { border-top: 1px solid var(--hair); padding: 44px 0 60px; font-size: 12.5px; color: var(--ink-faint); }
+  footer .wordmark { margin-bottom: 14px; }
+  @media (max-width: 640px) { .hero { padding: 56px 20px 32px; } section { padding: 24px 0 56px; } .fund { padding: 24px 20px; } .fund .ph { margin: -24px -20px 18px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="bar">
+    <a class="wordmark" href="/">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20l6.5-13 4 7 2.5-4.5L21 20z"/><circle cx="16.5" cy="6" r="1.6"/></svg>
+      <span>Mountain Preservation</span>
+    </a>
+    <div class="links">
+      <a href="/">About the Foundation</a>
+      <a href="/nepal/">Nepal Flood Relief</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <span class="eyebrow">Give</span>
+  <h1>Give directly to the mission.</h1>
+  <p class="lead">The Foundation accepts direct gifts only. No memberships, no products, no intermediaries: every donation goes to the work in the mountains.</p>
+  <p class="sub">Choose a fund below. Checkout is secure, takes under a minute, and a receipt arrives by email.</p>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="funds">
+      <div class="fund">
+        <div class="ph"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_800,h_480,f_auto,q_auto/p5_0596_2025_nepal_web_rgh6fp" alt="Smiling schoolchildren at their desks in a Nuwakot village school"></div>
+        <span class="eyebrow urgent">Urgent &middot; Trishuli Valley, Nepal</span>
+        <h2>Nepal Flood Recovery Fund</h2>
+        <p>On August 26 a glacial collapse sent a wall of water down the Trishuli, through the villages where our work began. This fund makes rebuilding grants through partners who have worked in the valley for decades, and it pays the direct costs of our October field mission. Every dollar is publicly accounted for. <a class="more" href="/nepal/">Read about the flood &rarr;</a></p>
+        <div class="give-btns">
+          <a class="btn" href="https://donate.stripe.com/9B66oG6gs74ugKW6ZS1Fe08">Give $100</a>
+          <a class="btn" href="https://donate.stripe.com/fZucN45co4Wm3Yadog1Fe09">Give $250</a>
+          <a class="btn" href="https://donate.stripe.com/5kQfZgbAM9cC66i2JC1Fe03">Give $500</a>
+          <a class="btn alt" href="https://donate.stripe.com/4gM3cu9sE0G67ambg81Fe00">Any amount</a>
+        </div>
+      </div>
+      <div class="fund">
+        <div class="ph"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_800,h_480,f_auto,q_auto/p5_0957_2025_nepal_web_ouljyv" alt="A farmer greets the camera among coffee trees"></div>
+        <span class="eyebrow">Where the need is greatest</span>
+        <h2>Mountain Preservation Fund</h2>
+        <p>An unrestricted gift to the Foundation. It funds the protection of mountain landscapes and the schools, clinics, and anti-trafficking programs that keep mountain families together, applied wherever the need is greatest across the ranges we serve. <a class="more" href="/#work">See the work &rarr;</a></p>
+        <div class="give-btns">
+          <a class="btn" href="https://donate.stripe.com/00w7sKeMY74ucuG2JC1Fe05">Give $100</a>
+          <a class="btn" href="https://donate.stripe.com/8x2dR8eMYdsS1Q2esk1Fe06">Give $500</a>
+          <a class="btn" href="https://donate.stripe.com/00wbJ020c1Ka66i9801Fe07">Give $1,000</a>
+          <a class="btn alt" href="https://donate.stripe.com/28E14m48k60q1Q29801Fe04">Any amount</a>
+        </div>
+      </div>
+    </div>
+    <p class="give-note">Secure checkout by Stripe. Card, Apple Pay, and Google Pay accepted. Your receipt is emailed immediately.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow" style="text-align:center">
+    <span class="eyebrow">Other Ways to Give</span>
+    <h2>Larger gifts, and gifts that are not online.</h2>
+    <p class="lead">Write to us and we answer personally, usually the same day.</p>
+  </div>
+  <div class="wrap">
+    <div class="ways">
+      <div class="way"><h3>Check or wire</h3><p>Email for mailing and wire instructions. Gifts of $5,000 or more are best made this way.</p></div>
+      <div class="way"><h3>Donor-advised fund</h3><p>Recommend a grant to Mountain Preservation Foundation, EIN 42-4666179.</p></div>
+      <div class="way"><h3>Appreciated securities</h3><p>Give stock directly and avoid capital gains. We will send transfer instructions.</p></div>
+      <div class="way"><h3>Legacy and bequests</h3><p>Include the Foundation in your estate plans. We are glad to talk it through with you and your advisor.</p></div>
+    </div>
+    <p style="margin-top:30px;text-align:center"><a class="btn alt" href="mailto:allegra@planet5media.com?subject=Mountain%20Preservation%20Foundation%20gift">Email us about a gift</a></p>
+    <p class="finequote" style="max-width:720px;margin-left:auto;margin-right:auto;text-align:center">Mountain Preservation Foundation is a Wyoming nonprofit corporation (EIN 42-4666179). Our federal 501(c)(3) application is in progress; once granted, exempt status applies retroactively, covering gifts made today. Please consult your tax advisor. Gifts carry no goods, services, or membership benefits, and we never sell or share donor information.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="wordmark" href="/">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20l6.5-13 4 7 2.5-4.5L21 20z"/><circle cx="16.5" cy="6" r="1.6"/></svg>
+      <span>Mountain Preservation Foundation</span>
+    </a>
+    <p>A Wyoming nonprofit corporation · EIN 42-4666179</p>
+    <p>Photography from the field in Nepal, from the personal library of Dirk Collins, used with permission. © 2026 Mountain Preservation Foundation. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
