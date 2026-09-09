@@ -66,6 +66,12 @@
   .way { background: var(--card); padding: 26px 22px; }
   .way h3 { font-size: 16px; margin: 0 0 8px; }
   .way p { font-size: 13.5px; margin: 0; }
+  .raised { max-width: 520px; margin: 22px auto 0; text-align: left; display: none; }
+  .raised .line { display: flex; justify-content: space-between; align-items: baseline; font-size: 14px; color: var(--ink-soft); }
+  .raised .line b { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--ink); font-weight: 500; }
+  .raised .track { height: 6px; background: var(--hair); border-radius: 3px; margin-top: 8px; overflow: hidden; }
+  .raised .fill { height: 100%; width: 0; background: var(--gold); border-radius: 3px; }
+  .raised .meta { font-size: 12.5px; color: var(--ink-faint); margin-top: 8px; }
   .finequote { font-size: 12.5px; color: var(--ink-faint); margin-top: 28px; line-height: 1.7; }
   footer { border-top: 1px solid var(--hair); padding: 44px 0 60px; font-size: 12.5px; color: var(--ink-faint); }
   footer .wordmark { margin-bottom: 14px; }
@@ -92,6 +98,7 @@
   <h1>Give directly to the mission.</h1>
   <p class="lead">The Foundation accepts direct gifts only. No memberships, no products, no intermediaries: every donation goes to the work in the mountains.</p>
   <p class="sub">Choose a fund below. Checkout is secure, takes under a minute, and a receipt arrives by email.</p>
+  <div class="raised" id="mpf-raised"><div class="line"><b id="mpf-amt">$0</b><span id="mpf-goal">Nepal Flood Recovery Fund</span></div><div class="track"><div class="fill" id="mpf-fill"></div></div><div class="meta" id="mpf-meta"></div></div>
 </header>
 
 <section>
@@ -155,5 +162,13 @@
   </div>
 </footer>
 
+<script>
+(function(){var f=function(c){return '$'+Math.round(c/100).toLocaleString('en-US');};
+fetch('https://www.planet5media.com/api/mpf/stats',{cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
+  if(!d||d.error||d.donors<5)return;var box=document.getElementById('mpf-raised');box.style.display='block';
+  document.getElementById('mpf-amt').textContent=f(d.raised_cents)+' raised';document.getElementById('mpf-goal').textContent='Nepal Flood Recovery Fund, toward '+f(d.goal_cents);
+  document.getElementById('mpf-fill').style.width=Math.min(100,Math.round(100*d.raised_cents/d.goal_cents))+'%';document.getElementById('mpf-meta').textContent=d.donors+' people have given so far.';
+}).catch(function(){});})();
+</script>
 </body>
 </html>
