@@ -75,6 +75,14 @@
   .raised .meta { font-size: 12.5px; color: var(--ink-faint); margin-top: 8px; }
   .matchbar .inner b.match { color: var(--gold); }
   .founding { font-size: 13.5px; color: var(--ink-soft); margin: 18px auto 0; }
+  .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-top: 36px; }
+  .tier { background: var(--card); border: 1px solid var(--hair); padding: 30px 26px; text-align: center; display: flex; flex-direction: column; }
+  .tier .amt { font-family: 'Playfair Display', serif; font-size: 38px; color: var(--ink); line-height: 1; }
+  .tier .amt::after { content: ""; display: block; width: 26px; height: 2px; background: var(--gold); margin: 14px auto 0; }
+  .tier p { font-size: 13.5px; color: var(--ink-soft); margin: 16px 0 0; flex: 1; }
+  .tier .btn { margin-top: 20px; }
+  .tier.lead { border-color: var(--ink); }
+  .tiernote { font-size: 13.5px; color: var(--ink-soft); text-align: center; margin: 22px auto 0; max-width: 62ch; }
   .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1px; background: var(--hair); border: 1px solid var(--hair); margin-top: 40px; }
   .stat { background: var(--card); padding: 26px 22px; }
   .stat .num { font-family: 'Playfair Display', serif; font-size: 30px; color: var(--ink); font-variant-numeric: tabular-nums; }
@@ -119,6 +127,7 @@
     <a class="btn" href="https://donate.stripe.com/9B66oG6gs74ugKW6ZS1Fe08" data-amount="100">Give $100</a>
     <a class="btn" href="https://donate.stripe.com/fZucN45co4Wm3Yadog1Fe09" data-amount="250">Give $250</a>
     <a class="btn" href="https://donate.stripe.com/5kQfZgbAM9cC66i2JC1Fe03" data-amount="500">Give $500</a>
+    <a class="btn" href="https://donate.stripe.com/5kQ14m0W8agG52e2JC1Fe0a" data-amount="1000">Give $1,000</a>
     <a class="btn alt" href="https://donate.stripe.com/4gM3cu9sE0G67ambg81Fe00">Any amount</a>
   </div>
   <p class="trust">Planet 5 covers the Foundation&rsquo;s operating costs, so your gift goes to the valley. Secure checkout by Stripe; card, Apple Pay, and Google Pay. Receipt by email.</p>
@@ -135,7 +144,35 @@
   <figcaption>A village school in Nuwakot district, one of the districts the flood passed through. Photography by Dirk Collins.</figcaption>
 </figure>
 
-<section style="border-top:0">
+<section id="leadership" style="border-top:0">
+  <div class="wrap narrow" style="text-align:center">
+    <span class="eyebrow">Leadership Gifts</span>
+    <h2>Fund a whole grant.</h2>
+    <p class="lead">Leadership gifts go out as complete grants to our partners in the valley, each one reported back to you with photographs and the accounting from our October field mission.</p>
+  </div>
+  <div class="wrap">
+    <div class="tiers">
+      <div class="tier">
+        <div class="amt">$5,000</div>
+        <p>A full grant to the valley, in the first round.</p>
+        <a class="btn" href="https://donate.stripe.com/00wbJ0cEQewW8eqesk1Fe0b">Give $5,000</a>
+      </div>
+      <div class="tier lead">
+        <div class="amt">$10,000</div>
+        <p>A full grant, reported to you by name from the valley in October.</p>
+        <a class="btn" href="https://donate.stripe.com/6oUeVcfR23Si7amckc1Fe0c">Give $10,000</a>
+      </div>
+      <div class="tier">
+        <div class="amt">$25,000</div>
+        <p>Funds the first grant round on its own. We will call you before it goes out.</p>
+        <a class="btn" href="https://donate.stripe.com/fZu00icEQewWeCOfwo1Fe0d">Give $25,000</a>
+      </div>
+    </div>
+    <p class="tiernote" id="mpf-tiernote">Card, Apple Pay, and Google Pay above. For a wire, donor-advised fund, or appreciated securities, write <a href="mailto:give@mountainpreservation.org?subject=Leadership%20gift%2C%20Nepal%20Flood%20Recovery%20Fund" style="color:var(--gold-deep)">give@mountainpreservation.org</a> and Allegra will answer personally.</p>
+  </div>
+</section>
+
+<section>
   <div class="wrap narrow">
     <span class="eyebrow">Why Give Here</span>
     <h2>This valley is personal.</h2>
@@ -298,6 +335,7 @@
       document.getElementById('mpf-meta').textContent=d.donors+' people have given so far.';
       var fo=document.getElementById('mpf-founding');if(fo)fo.style.display='none';
     }
+    if(d.deadline){var tn=document.getElementById('mpf-tiernote');if(tn){tn.innerHTML='<strong style="color:var(--ink)">Gifts received by '+d.deadline+' go into the first grant.</strong> '+tn.innerHTML;}}
     if(d.impact){document.querySelectorAll('[data-amount]').forEach(function(a){var t=d.impact[a.getAttribute('data-amount')];if(t){a.innerHTML=a.textContent+'<small>'+t+'</small>';}});}
   }).catch(function(){});
 })();
