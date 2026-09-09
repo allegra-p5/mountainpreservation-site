@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accountability | Mountain Preservation Foundation</title>
+<meta name="description" content="How Mountain Preservation Foundation is governed, funded, and held to account: independent oversight, separate books, published reporting.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mountain Preservation Foundation">
+<meta property="og:title" content="Accountability | Mountain Preservation Foundation">
+<meta property="og:description" content="How Mountain Preservation Foundation is governed, funded, and held to account: independent oversight, separate books, published reporting.">
+<meta property="og:image" content="https://res.cloudinary.com/planet5/image/upload/c_fill,g_auto,w_1200,h_630,f_jpg,q_auto/Nepal-Expedition-Mountain-Preservation_vxqekg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://mountainpreservation.org/accountability/">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 20l6.5-13 4 7 2.5-4.5L21 20z' fill='none' stroke='%23F4C227' stroke-width='1.8' stroke-linejoin='round'/%3E%3Ccircle cx='16.5' cy='6' r='1.6' fill='%23F4C227'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  html, body { margin: 0; padding: 0; }
+  img { max-width: 100%; }
+
+  :root {
+    --paper: #FFFFFF;
+    --card: #FFFFFF;
+    --ink: #1F231E;
+    --ink-soft: #5E6157;
+    --ink-faint: #8B8B7E;
+    --hair: rgba(31, 35, 30, 0.14);
+    --gold: #F4C227;
+    --gold-deep: #8F6E14;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 16.5px;
+    line-height: 1.75;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+  .narrow { max-width: 700px; margin-left: auto; margin-right: auto; }
+
+  .eyebrow {
+    font-size: 11.5px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold-deep);
+  }
+  h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; text-wrap: balance; color: var(--ink); }
+  .ico { stroke: var(--gold-deep); fill: none; stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* Nav */
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--hair);
+  }
+  nav .bar { display: flex; align-items: center; gap: 18px; padding: 16px 28px; max-width: 1120px; margin: 0 auto; }
+  .wordmark { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; }
+  .wordmark .ico { width: 22px; height: 22px; stroke: var(--gold-deep); }
+  .wordmark span { font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; }
+  nav .links { margin-left: auto; display: flex; align-items: center; gap: 26px; }
+  nav .links a { color: var(--ink-soft); text-decoration: none; font-size: 13.5px; }
+  nav .links a:hover { color: var(--ink); }
+  .btn {
+    display: inline-block; background: var(--ink); color: var(--paper);
+    font-weight: 500; font-size: 14px; letter-spacing: 0.04em;
+    padding: 13px 30px; border-radius: 2px; text-decoration: none;
+  }
+  .btn:hover { background: #000; }
+  .btn.gold { background: var(--gold); color: #171406; font-weight: 600; }
+  .btn.gold:hover { filter: brightness(1.05); }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+  .give-btns { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 34px; }
+  .give-btns .btn { padding: 13px 22px; }
+  @media (max-width: 680px) { nav .links a:not(.btn) { display: none; } }
+
+  /* Hero: editorial, type-first */
+  .hero { padding: 96px 28px 72px; max-width: 1120px; margin: 0 auto; text-align: center; }
+  .hero .eyebrow { display: block; margin-bottom: 22px; }
+  .hero h1 { font-size: clamp(38px, 6.4vw, 74px); line-height: 1.06; margin: 0 auto 26px; max-width: 18ch; font-weight: 500; }
+  .hero p { color: var(--ink-soft); font-size: clamp(16.5px, 2vw, 19.5px); max-width: 58ch; margin: 0 auto 38px; }
+  .hero .ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+  @media (prefers-reduced-motion: no-preference) {
+    .hero > * { animation: rise 0.9s ease-out both; }
+    .hero p { animation-delay: 0.12s; } .hero .ctas { animation-delay: 0.22s; }
+    @keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+  }
+
+  figure.band { margin: 0; position: relative; }
+  figure.band img { width: 100%; height: 74vh; object-fit: cover; display: block; }
+  figure.band figcaption {
+    max-width: 1120px; margin: 0 auto; padding: 14px 28px 0;
+    font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 15px; color: var(--ink-faint);
+  }
+
+  /* Sections */
+  section { padding: 96px 0; }
+  section + section { border-top: 1px solid var(--hair); }
+  section .eyebrow { display: block; margin-bottom: 12px; }
+  h2 { font-size: clamp(28px, 4.2vw, 46px); line-height: 1.12; margin: 0 0 24px; font-weight: 500; }
+  p { margin: 0 0 18px; color: var(--ink-soft); }
+  p.lead { color: var(--ink); font-size: 18.5px; }
+  strong { color: var(--ink); font-weight: 600; }
+  section[id] { scroll-margin-top: 68px; }
+
+  .statement { font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: clamp(21px, 2.9vw, 28px); line-height: 1.5; color: var(--ink); margin: 0 0 18px; text-wrap: balance; }
+  .statement em { font-style: italic; color: var(--gold-deep); }
+  .goldrule { width: 44px; height: 2px; background: var(--gold); border: 0; margin: 34px 0; }
+  .center .goldrule { margin-left: auto; margin-right: auto; }
+
+  .statgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1px; background: var(--hair); border: 1px solid var(--hair); margin-top: 40px; }
+  .stat { background: var(--card); padding: 26px 22px; }
+  .stat .num { font-family: 'Playfair Display', serif; font-size: 32px; color: var(--ink); line-height: 1.15; font-variant-numeric: tabular-nums; }
+  .stat .num::after { content: ""; display: block; width: 26px; height: 2px; background: var(--gold); margin-top: 10px; }
+  .stat .what { font-size: 12.5px; color: var(--ink-faint); margin-top: 10px; line-height: 1.55; }
+
+  /* Albums: framed prints in a horizontal gallery */
+  .album { margin-top: 44px; display: flex; gap: 22px; overflow-x: auto; padding: 4px 28px 26px; scroll-snap-type: x mandatory; }
+  .album::-webkit-scrollbar { height: 6px; }
+  .album::-webkit-scrollbar-thumb { background: var(--hair); border-radius: 3px; }
+  .album figure { flex: 0 0 340px; margin: 0; scroll-snap-align: start; }
+  .album figure.tall { flex-basis: 270px; }
+  .album .frame { background: var(--card); border: 1px solid var(--hair); padding: 12px; box-shadow: 0 10px 28px rgba(31,35,30,0.07); }
+  .album img { display: block; width: 100%; height: 236px; object-fit: cover; }
+  .album figcaption { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 14px; color: var(--ink-faint); padding: 12px 4px 0; line-height: 1.5; }
+  .albumhead { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; }
+  .albumhead .hint { margin-left: auto; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin-top: 40px; }
+  .card { background: var(--card); border: 1px solid var(--hair); padding: 28px 24px; }
+  .card .ico { width: 30px; height: 30px; display: block; margin-bottom: 18px; }
+  .card h3 { font-size: 19px; margin: 0 0 8px; }
+  .card .tag { font-size: 10.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); display: block; margin-bottom: 8px; }
+  .card p { font-size: 13.5px; line-height: 1.65; margin: 0; color: var(--ink-soft); }
+
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-top: 8px; }
+  .split img { width: 100%; display: block; }
+  .split .frame { background: var(--card); border: 1px solid var(--hair); padding: 14px; box-shadow: 0 12px 32px rgba(31,35,30,0.08); }
+  @media (max-width: 880px) { .split { grid-template-columns: 1fr; } }
+
+  .rows { border: 1px solid var(--hair); background: var(--card); margin-top: 40px; }
+  .row { display: flex; flex-wrap: wrap; gap: 6px 28px; padding: 22px 26px; border-top: 1px solid var(--hair); align-items: baseline; }
+  .row:first-child { border-top: 0; }
+  .row .k { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 14.5px; color: var(--ink); min-width: 240px; }
+  .row .k .ico { width: 20px; height: 20px; flex: none; }
+  .row .v { flex: 1; min-width: 260px; font-size: 14.5px; color: var(--ink-soft); }
+  @media (max-width: 640px) { .row .k, .row .v { flex-basis: 100%; min-width: 0; } }
+
+  /* Give */
+  #give { background: var(--card); border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair); }
+  .give-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 40px; }
+  .give { background: var(--paper); border: 1px solid var(--hair); padding: 30px 28px; display: flex; flex-direction: column; }
+  .give .amt { font-family: 'Playfair Display', serif; font-size: 34px; color: var(--ink); }
+  .give .amt::after { content: ""; display: block; width: 26px; height: 2px; background: var(--gold); margin-top: 10px; }
+  .give h3 { font-size: 18px; margin: 14px 0 10px; }
+  .give p { font-size: 13.5px; color: var(--ink-soft); flex: 1; }
+  .give .btn { margin-top: 18px; text-align: center; }
+  .finequote { font-size: 12.5px; color: var(--ink-faint); margin-top: 28px; line-height: 1.7; }
+
+  .legalblock { border: 1px solid var(--hair); background: var(--paper); padding: 30px 32px; margin-top: 48px; font-size: 13px; color: var(--ink-faint); line-height: 1.7; }
+  .legalblock h3 { font-family: 'Inter', sans-serif; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 14px; }
+  .legalblock p { font-size: 13px; margin-bottom: 12px; color: var(--ink-faint); }
+  footer { border-top: 1px solid var(--hair); padding: 48px 0 64px; font-size: 12.5px; color: var(--ink-faint); }
+  footer .wordmark { margin-bottom: 16px; }
+  footer a { color: var(--ink-soft); }
+
+  @media (max-width: 640px) {
+    section { padding: 64px 0; }
+    .hero { padding: 64px 20px 48px; }
+    figure.band img { height: 48vh; }
+    .album figure { flex-basis: 280px; }
+  }
+  @media print { nav, .btn { display: none; } }
+</style>
+</head>
+<body>
+<nav>
+  <div class="bar">
+    <a class="wordmark" href="/">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20l6.5-13 4 7 2.5-4.5L21 20z"/><circle cx="16.5" cy="6" r="1.6"/></svg>
+      <span>Mountain Preservation</span>
+    </a>
+    <div class="links">
+      <a href="/work/">Our Work</a>
+      <a href="/accountability/">Accountability</a>
+      <a href="/nepal/">Nepal</a>
+      <a class="btn gold" href="/give/">Donate</a>
+    </div>
+  </div>
+</nav>
+<header class="hero" id="top">
+  <span class="eyebrow">Accountability</span>
+  <h1>We measure what we promise.</h1>
+  <p>Good intentions aren&rsquo;t enough. Our work is being built around transparent goals, independent oversight and measurable outcomes. We intend to show not only where money went, but what changed because it was there.</p>
+</header>
+
+<figure class="band">
+  <img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_2400/p5_0292_2025_nepal_web_xn5yp2" alt="Prayer flags streaming from a golden stupa" loading="lazy">
+  <figcaption>Prayer flags above Kathmandu. Photography by Dirk Collins.</figcaption>
+</figure>
+
+<section id="commitments" style="border-top:0">
+  <div class="wrap narrow">
+    <span class="eyebrow">Our Commitments</span>
+    <h2>Designed to be verified by people who are not us.</h2>
+  </div>
+  <div class="wrap">
+    <div class="rows">
+      <div class="row"><span class="k"><svg class="ico" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></svg>Independent monitoring</span><span class="v">Satellite imagery, community-led patrols with smartphone reporting, and third-party verification, published to a public dashboard.</span></div>
+      <div class="row"><span class="k"><svg class="ico" viewBox="0 0 24 24"><path d="M3 9l9-5.5L21 9M4.5 9v8M9.5 9v8M14.5 9v8M19.5 9v8M3 20h18"/></svg>Governance</span><span class="v">A majority-independent board, arms-length written agreements with any commercial partner, and separate books and audit.</span></div>
+      <div class="row"><span class="k"><svg class="ico" viewBox="0 0 24 24"><path d="M12 6c-2-1.4-4.5-2-8-2v14c3.5 0 6 .6 8 2 2-1.4 4.5-2 8-2V4c-3.5 0-6 .6-8 2z"/><path d="M12 6v14"/></svg>Transparency</span><span class="v">Annual reports, IRS Form 990 filings, and audited financial statements will be published on this site every year.</span></div>
+      <div class="row"><span class="k"><svg class="ico" viewBox="0 0 24 24"><path d="M12 20s-7-4.5-9-9a4.9 4.9 0 0 1 9-2.4A4.9 4.9 0 0 1 21 11c-2 4.5-9 9-9 9z"/></svg>Donor intent</span><span class="v">Designated gifts are applied to the designated program. If a program becomes fully funded, we apply the balance to the closest related need and tell you we did.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="model">
+  <div class="wrap narrow">
+    <span class="eyebrow">How Our Model Works</span>
+    <h2>A different way to fund preservation.</h2>
+    <p class="lead">Mountain Preservation Foundation was designed so that philanthropy can remain focused on the work.</p>
+    <p>Planet 5 has committed a portion of revenue from its Guardian Program to help support the Foundation&rsquo;s operating structure. That commitment is made under a written agreement, and our commercial and philanthropic activities remain separate, with independent governance and accounting. The Guardian Program is a Planet 5 product; you can read about it on <a href="https://www.planet5media.com/guardians" style="color:var(--gold-deep)">planet5media.com</a>.</p>
+    <p>Donors to the Foundation are giving to the Foundation alone. Gifts carry no goods, services, or membership benefits. Designated gifts, such as the Nepal Flood Recovery Fund, are reserved for the designated program and its direct field costs.</p>
+    <p><strong>The purpose is simple: keep more philanthropic capital where it belongs, in the mountains.</strong></p>
+  </div>
+</section>
+
+<section id="reporting">
+  <div class="wrap narrow">
+    <span class="eyebrow">Reporting</span>
+    <h2>As we grow, our reporting grows with us.</h2>
+    <p class="lead">The Foundation was incorporated in Wyoming on August 24, 2026. Our first program is the Nepal Flood Recovery Fund, and our first report will be the accounting of that fund: every grant, with photographs and receipts from the October field mission, published on this site.</p>
+    <p>From there: annual reports, IRS Form 990 filings, and audited financial statements, published every year. Outcomes will be reported against stated goals, from habitat protected and livelihoods supported to schools, health programs and community initiatives.</p>
+  </div>
+</section>
+
+<figure class="band" style="margin-top:0">
+  <img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_2400/Nepal--37_hqgfgr" alt="Dirk Collins photographing from a vehicle window" loading="lazy">
+  <figcaption>Documenting the valley. Every grant is reported back with photographs from the field.</figcaption>
+</figure>
+
+<section id="legal" style="border-top:0">
+  <div class="wrap narrow">
+    <span class="eyebrow">Legal</span>
+    <h2>Who we are.</h2>
+    <p>Mountain Preservation Foundation is a Wyoming nonprofit corporation, EIN 42-4666179, with a registered office at 30 N Gould St, Ste R, Sheridan, WY 82801. Our application for recognition of federal tax exemption under Section 501(c)(3) is in progress; once granted, exemption applies retroactively to our date of incorporation. We never sell or share donor information.</p>
+    <p>Questions about governance, reporting, or a gift: <a href="mailto:give@mountainpreservation.org" style="color:var(--gold-deep)">give@mountainpreservation.org</a>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="wordmark" href="#top">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20l6.5-13 4 7 2.5-4.5L21 20z"/><circle cx="16.5" cy="6" r="1.6"/></svg>
+      <span>Mountain Preservation Foundation</span>
+    </a>
+    <p>A Wyoming nonprofit corporation · EIN 42-4666179</p>
+    <p>Photography from the field in Nepal and Kenya, from the personal library of Dirk Collins, used with permission. © 2026 Mountain Preservation Foundation. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
