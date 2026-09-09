@@ -63,6 +63,18 @@
   .give-btns .btn { margin-top: 0; padding: 13px 22px; }
   .give-btns .btn.alt { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
   .give-note { font-size: 13px; color: var(--ink-soft); margin-top: 12px; }
+  .hero .give-btns { justify-content: center; margin-top: 26px; }
+  .hero .give-btns .btn { font-size: 15px; padding: 15px 26px; }
+  .hero .give-btns .btn small { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0; text-transform: none; opacity: .85; margin-top: 2px; }
+  .hero .trust { font-size: 13.5px; color: var(--ink-soft); max-width: 60ch; margin: 18px auto 0; }
+  .raised { max-width: 560px; margin: 26px auto 0; text-align: left; display: none; }
+  .raised .line { display: flex; justify-content: space-between; align-items: baseline; font-size: 14px; color: var(--ink-soft); }
+  .raised .line b { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--ink); font-weight: 500; }
+  .raised .track { height: 6px; background: var(--hair); border-radius: 3px; margin-top: 8px; overflow: hidden; }
+  .raised .fill { height: 100%; width: 0; background: var(--gold); border-radius: 3px; transition: width .8s ease; }
+  .raised .meta { font-size: 12.5px; color: var(--ink-faint); margin-top: 8px; }
+  .matchbar .inner b.match { color: var(--gold); }
+  .founding { font-size: 13.5px; color: var(--ink-soft); margin: 18px auto 0; }
   .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1px; background: var(--hair); border: 1px solid var(--hair); margin-top: 40px; }
   .stat { background: var(--card); padding: 26px 22px; }
   .stat .num { font-family: 'Playfair Display', serif; font-size: 30px; color: var(--ink); font-variant-numeric: tabular-nums; }
@@ -95,20 +107,32 @@
 </nav>
 
 <div class="matchbar">
-  <div class="inner"><b>GIVING IS OPEN</b><span>Online giving to the Nepal Flood Recovery Fund is open. Every gift is receipted by email.</span></div>
+  <div class="inner" id="mpf-bar"><b>GIVING IS OPEN</b><span>Online giving to the Nepal Flood Recovery Fund is open. Every gift is receipted by email.</span></div>
 </div>
 
 <header class="hero">
   <span class="eyebrow urgent">Nepal Flood Relief &middot; Trishuli Valley &middot; August 2026</span>
   <h1>The valley where our work began is underwater.</h1>
-  <p class="lead">On August 26, a glacial collapse in Tibet sent a wall of water and debris down the Bhotekoshi and the Trishuli, through Rasuwa, Nuwakot, and six more districts. More than 1,350 people are confirmed dead, at least 195 of them in Nuwakot, and more than 5,000 are still missing. These are the villages our coffee comes from: home of Nuwa Estate, our partner on this land, and the farming families Nuwa has known by name since 2007. They are the people we work with and support.</p>
-  <p class="sub">Our partners have worked in this valley for decades, and our commitment to it will outlast the cameras. In October, we will be on the ground ourselves, documenting the mountain regions of Nepal: the people, the villages, and the rebuilding.</p>
-  <a class="btn" href="#give">How to stand with the valley</a>
+  <p class="lead">On August 26, a glacial collapse sent a wall of water down the Trishuli through Rasuwa and Nuwakot. More than 1,350 people are dead and more than 5,000 are missing. These are the villages our coffee comes from, and the families our partners have known by name since 2007.</p>
+  <p class="sub">Your gift goes to relief and rebuilding grants through partners already on the ground, and in October we will be in the valley ourselves to show you exactly where it went.</p>
+  <div class="give-btns">
+    <a class="btn" href="https://donate.stripe.com/9B66oG6gs74ugKW6ZS1Fe08" data-amount="100">Give $100</a>
+    <a class="btn" href="https://donate.stripe.com/fZucN45co4Wm3Yadog1Fe09" data-amount="250">Give $250</a>
+    <a class="btn" href="https://donate.stripe.com/5kQfZgbAM9cC66i2JC1Fe03" data-amount="500">Give $500</a>
+    <a class="btn alt" href="https://donate.stripe.com/4gM3cu9sE0G67ambg81Fe00">Any amount</a>
+  </div>
+  <p class="trust">Planet 5 covers the Foundation&rsquo;s operating costs, so your gift goes to the valley. Secure checkout by Stripe; card, Apple Pay, and Google Pay. Receipt by email.</p>
+  <div class="raised" id="mpf-raised">
+    <div class="line"><b id="mpf-amt">$0</b><span id="mpf-goal">toward $25,000</span></div>
+    <div class="track"><div class="fill" id="mpf-fill"></div></div>
+    <div class="meta" id="mpf-meta"></div>
+  </div>
+  <p class="founding" id="mpf-founding">Be one of the first 50 people to fund the valley&rsquo;s recovery.</p>
 </header>
 
 <figure class="band">
-  <img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_2400/p5__2025_nepal_web-3_mhw9wu" alt="The forested mid-hills above the Trishuli valley, Nuwakot district, Nepal">
-  <figcaption>The mid-hills above the Trishuli, Nuwakot district. Photography by Dirk Collins.</figcaption>
+  <img src="https://res.cloudinary.com/planet5/image/upload/c_fill,g_faces,f_auto,q_auto,w_2400,h_1400/p5_0596_2025_nepal_web_rgh6fp" alt="Schoolchildren at their desks in a Nuwakot village school" fetchpriority="high">
+  <figcaption>A village school in Nuwakot district, one of the districts the flood passed through. Photography by Dirk Collins.</figcaption>
 </figure>
 
 <section style="border-top:0">
@@ -127,46 +151,6 @@
       <div class="stat"><div class="num">195+</div><div class="what">lives lost in Nuwakot, the district our coffee comes from, with more than 2,300 still missing there</div></div>
       <div class="stat"><div class="num">Oct 2026</div><div class="what">we return to the valley to document and assist the rebuilding</div></div>
     </div>
-  </div>
-</section>
-
-<section id="nuwakot">
-  <div class="wrap narrow">
-    <span class="eyebrow">Our Connection</span>
-    <h2>Our coffee comes from Nuwakot.</h2>
-    <p class="lead">Nuwa Estate sits at 1,400 metres in Nuwakot, one of the districts the flood passed through. The farm belongs to the family of Tenzing Norgay, and we are its long-term US partner, bringing its coffee to America exclusively.</p>
-    <p>Its sales already help fund schools in the same district. Our commitment is to the commerce, the coffee, the schools, and the people of this region for the long run. The flood does not change that commitment; it deepens it.</p>
-  </div>
-</section>
-
-<section id="region">
-  <div class="wrap">
-    <div class="albumhead">
-      <div>
-        <span class="eyebrow">The Region</span>
-        <h2 style="margin-bottom:6px">The people and the land.</h2>
-      </div>
-      
-    </div>
-  </div>
-  <div class="album">
-    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0183_2025_nepal_web_srojwu" alt="Freshly picked coffee cherries held in cupped hands, Nuwakot" loading="lazy"></div><figcaption>The Nuwakot harvest, in the hands that grow it.</figcaption></figure>
-    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_1005_2025_nepal_web_yv738b" alt="Hands picking ripe coffee cherries from the branch" loading="lazy"></div><figcaption>Shade-grown arabica, picked by hand at altitude.</figcaption></figure>
-    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0957_2025_nepal_web_ouljyv" alt="A grower greets the camera among coffee trees" loading="lazy"></div><figcaption>The growers of Nuwakot, Nuwa Estate&#8217;s community.</figcaption></figure>
-    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_1013_2025_nepal_web_me0azz" alt="Rows of young coffee plants under prayer flags" loading="lazy"></div><figcaption>New plantings under prayer flags on the hillside.</figcaption></figure>
-    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0509_2025_nepal_web_bil0vm" alt="A teacher and her class seated in a circle in a village classroom" loading="lazy"></div><figcaption>Morning circle at a village school in the district.</figcaption></figure>
-    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0704_2025_nepal_web_zgo4ad" alt="Children waving in a schoolyard" loading="lazy"></div><figcaption>The schoolyard, the valley&#8217;s future.</figcaption></figure>
-    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_2282_2025_nepal_web_l02va5" alt="Farmers planting rice together in a terraced paddy" loading="lazy"></div><figcaption>The valley working its own land.</figcaption></figure>
-    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_3367_2025_nepal_web_bgbpz3" alt="A woman laughing beside drying trays of coffee" loading="lazy"></div><figcaption>The drying trays, and the women who run them.</figcaption></figure>
-  </div>
-</section>
-
-<section id="commerce">
-  <div class="wrap narrow">
-    <span class="eyebrow">Our Philosophy</span>
-    <h2>Commerce, not charity.</h2>
-    <p class="lead">A donation is spent once. A US market for Nuwakot coffee pays every harvest, for decades, and every bag that leaves the district is income earned rather than aid received.</p>
-    <p>We are asking for long-term partners in that recovery, not a one-time gesture. Emergency relief matters this month; a working economy is what rebuilds a valley for good. That is why this fund pairs rebuilding grants with our October field mission, and why the strongest thing you can do after giving is simple: drink the valley's coffee.</p>
   </div>
 </section>
 
@@ -208,6 +192,46 @@
     <span class="eyebrow">October</span>
     <h2>We will be documenting this region in October.</h2>
     <p class="lead">The people, the villages, and the rebuilding. Everyone who gives will be the first to see it: the photographs, the stories, and the progress, straight from the valley.</p>
+  </div>
+</section>
+
+<section id="nuwakot">
+  <div class="wrap narrow">
+    <span class="eyebrow">Our Connection</span>
+    <h2>Our coffee comes from Nuwakot.</h2>
+    <p class="lead">Nuwa Estate sits at 1,400 metres in Nuwakot, one of the districts the flood passed through. The farm belongs to the family of Tenzing Norgay, and we are its long-term US partner, bringing its coffee to America exclusively.</p>
+    <p>Its sales already help fund schools in the same district. Our commitment is to the commerce, the coffee, the schools, and the people of this region for the long run. The flood does not change that commitment; it deepens it.</p>
+  </div>
+</section>
+
+<section id="region">
+  <div class="wrap">
+    <div class="albumhead">
+      <div>
+        <span class="eyebrow">The Region</span>
+        <h2 style="margin-bottom:6px">The people and the land.</h2>
+      </div>
+      
+    </div>
+  </div>
+  <div class="album">
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0183_2025_nepal_web_srojwu" alt="Freshly picked coffee cherries held in cupped hands, Nuwakot" loading="lazy"></div><figcaption>The Nuwakot harvest, in the hands that grow it.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_1005_2025_nepal_web_yv738b" alt="Hands picking ripe coffee cherries from the branch" loading="lazy"></div><figcaption>Shade-grown arabica, picked by hand at altitude.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0957_2025_nepal_web_ouljyv" alt="A grower greets the camera among coffee trees" loading="lazy"></div><figcaption>The growers of Nuwakot, Nuwa Estate&#8217;s community.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_1013_2025_nepal_web_me0azz" alt="Rows of young coffee plants under prayer flags" loading="lazy"></div><figcaption>New plantings under prayer flags on the hillside.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0509_2025_nepal_web_bil0vm" alt="A teacher and her class seated in a circle in a village classroom" loading="lazy"></div><figcaption>Morning circle at a village school in the district.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0704_2025_nepal_web_zgo4ad" alt="Children waving in a schoolyard" loading="lazy"></div><figcaption>The schoolyard, the valley&#8217;s future.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_2282_2025_nepal_web_l02va5" alt="Farmers planting rice together in a terraced paddy" loading="lazy"></div><figcaption>The valley working its own land.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_3367_2025_nepal_web_bgbpz3" alt="A woman laughing beside drying trays of coffee" loading="lazy"></div><figcaption>The drying trays, and the women who run them.</figcaption></figure>
+  </div>
+</section>
+
+<section id="commerce">
+  <div class="wrap narrow">
+    <span class="eyebrow">After You Give</span>
+    <h2>Commerce, not charity.</h2>
+    <p class="lead">Relief rebuilds a valley this year. A US market for Nuwakot coffee pays every harvest for decades, and every bag that leaves the district is income earned rather than aid received.</p>
+    <p>We are asking for long-term partners in that recovery, not a one-time gesture. Emergency relief matters this month; a working economy is what rebuilds a valley for good. That is why this fund pairs rebuilding grants with our October field mission, and why the strongest thing you can do after giving is simple: drink the valley's coffee.</p>
   </div>
 </section>
 
@@ -257,5 +281,26 @@
   </div>
 </footer>
 
+
+<script>
+(function(){
+  var f=function(c){return '$'+Math.round(c/100).toLocaleString('en-US');};
+  fetch('https://www.planet5media.com/api/mpf/stats',{cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
+    if(!d||d.error)return;
+    var bar=document.getElementById('mpf-bar');
+    if(d.match_cents){bar.innerHTML='<b class="match">MATCH ACTIVE</b><span>The first '+f(d.match_cents)+' given is '+(d.match_label||'matched')+'. Your gift counts twice.'+(d.deadline?' Gifts by '+d.deadline+(d.deadline_label?' '+d.deadline_label:' go into the first grant.'):'')+'</span>';}
+    else if(d.deadline){bar.innerHTML='<b>FIRST GRANT '+d.deadline.toUpperCase()+'</b><span>Gifts received by '+d.deadline+' '+(d.deadline_label||'go into the first grant to the valley.')+'</span>';}
+    if(d.donors>=5){
+      var box=document.getElementById('mpf-raised');box.style.display='block';
+      document.getElementById('mpf-amt').textContent=f(d.raised_cents)+' raised';
+      document.getElementById('mpf-goal').textContent='toward '+f(d.goal_cents);
+      document.getElementById('mpf-fill').style.width=Math.min(100,Math.round(100*d.raised_cents/d.goal_cents))+'%';
+      document.getElementById('mpf-meta').textContent=d.donors+' people have given so far.';
+      var fo=document.getElementById('mpf-founding');if(fo)fo.style.display='none';
+    }
+    if(d.impact){document.querySelectorAll('[data-amount]').forEach(function(a){var t=d.impact[a.getAttribute('data-amount')];if(t){a.innerHTML=a.textContent+'<small>'+t+'</small>';}});}
+  }).catch(function(){});
+})();
+</script>
 </body>
 </html>
