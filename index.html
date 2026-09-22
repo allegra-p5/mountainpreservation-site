@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mountain Preservation Foundation</title>
-<meta name="description" content="Mountain Preservation Foundation protects mountain landscapes by investing in the people, communities and livelihoods that sustain them. Born in the Nepal Himalaya. Built for mountain communities everywhere.">
+<meta name="description" content="Mountain Preservation Foundation protects mountain landscapes by investing in the people, communities and livelihoods that sustain them.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mountain Preservation Foundation">
 <meta property="og:title" content="Mountain Preservation Foundation">
-<meta property="og:description" content="Mountain Preservation Foundation protects mountain landscapes by investing in the people, communities and livelihoods that sustain them. Born in the Nepal Himalaya. Built for mountain communities everywhere.">
+<meta property="og:description" content="Mountain Preservation Foundation protects mountain landscapes by investing in the people, communities and livelihoods that sustain them.">
 <meta property="og:image" content="https://res.cloudinary.com/planet5/image/upload/c_fill,g_auto,w_1200,h_630,f_jpg,q_auto/Nepal-Expedition-Mountain-Preservation_vxqekg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://mountainpreservation.org/">
@@ -118,19 +118,18 @@
   .stat .what { font-size: 12.5px; color: var(--ink-faint); margin-top: 10px; line-height: 1.55; }
 
   /* Albums: framed prints in a horizontal gallery */
-  .album { margin-top: 44px; display: flex; gap: 22px; overflow-x: auto; padding: 4px 28px 26px; scroll-snap-type: x mandatory; }
-  .album::-webkit-scrollbar { height: 6px; }
-  .album::-webkit-scrollbar-thumb { background: var(--hair); border-radius: 3px; }
-  .album figure { flex: 0 0 340px; margin: 0; scroll-snap-align: start; }
-  .album figure.tall { flex-basis: 270px; }
+  .album { margin: 44px auto 0; max-width: 1120px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 4px 28px 26px; }
+  .album figure { margin: 0; }
   .album .frame { background: var(--card); border: 1px solid var(--hair); padding: 12px; box-shadow: 0 10px 28px rgba(31,35,30,0.07); }
-  .album img { display: block; width: 100%; height: 236px; object-fit: cover; }
+  .album img { display: block; width: 100%; height: auto; aspect-ratio: 680 / 472; object-fit: cover; }
   .album figcaption { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 14px; color: var(--ink-faint); padding: 12px 4px 0; line-height: 1.5; }
   .albumhead { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; }
   .albumhead .hint { margin-left: auto; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); }
 
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin-top: 40px; }
-  .card { background: var(--card); border: 1px solid var(--hair); padding: 28px 24px; }
+  .cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-top: 40px; }
+  .card { background: var(--card); border: 1px solid var(--hair); padding: 24px 20px; }
+  @media (max-width: 980px) { .cards { grid-template-columns: repeat(6, 1fr); } .card { grid-column: span 2; } .card:nth-child(4), .card:nth-child(5) { grid-column: span 3; } }
+  @media (max-width: 640px) { .cards { grid-template-columns: 1fr; } .card, .card:nth-child(4), .card:nth-child(5) { grid-column: auto; } }
   .card .ico { width: 30px; height: 30px; display: block; margin-bottom: 18px; }
   .card h3 { font-size: 19px; margin: 0 0 8px; }
   .card .tag { font-size: 10.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); display: block; margin-bottom: 8px; }
@@ -171,7 +170,8 @@
     section { padding: 64px 0; }
     .hero { padding: 64px 20px 48px; }
     figure.band img { height: 48vh; }
-    .album figure { flex-basis: 280px; }
+    .album { grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 4px 20px 20px; }
+    .album .frame { padding: 7px; }
   }
   @media print { nav, .btn { display: none; } }
 </style>
@@ -184,34 +184,31 @@
       <span>Mountain Preservation</span>
     </a>
     <div class="links">
-      <a href="/work/">Our Work</a>
-      <a href="/accountability/">Accountability</a>
+      <a href="#system">Our Work</a>
+      <a href="#accountability">Accountability</a>
       <a href="/nepal/">Nepal</a>
-      <a class="btn gold" href="/give/">Donate</a>
+      <a class="btn gold" href="/give/">Give</a>
     </div>
   </div>
 </nav>
 <div style="background:#1F231E;color:#F3F1E8">
   <a href="/nepal/" style="display:block;max-width:1120px;margin:0 auto;padding:14px 28px;color:#F3F1E8;text-decoration:none;font-size:14.5px">
     <span style="color:#F4C227;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;font-size:12px;margin-right:12px">Nepal flood relief</span>
-    The Trishuli valley, where our work began, flooded on August 26. How to help &rarr;
+    The Trishuli valley flooded on August 26. How to help &rarr;
   </a>
 </div>
 
 <header class="hero" id="top">
-  <span class="eyebrow">Mountain Preservation Foundation</span>
   <h1>Every great range, preserved by the people who live beneath it.</h1>
-  <p>Mountain Preservation Foundation protects mountain landscapes by investing in the people, communities and livelihoods that sustain them.</p>
-  <p style="font-family:'Playfair Display',Georgia,serif;font-style:italic;color:var(--ink);font-size:18px;margin-top:-18px">Born in the Nepal Himalaya. Built for mountain communities everywhere.</p>
+  <p>We protect mountain landscapes by investing in the people, communities and livelihoods that sustain them.</p>
   <div class="ctas">
     <a class="btn gold" href="/give/">Give</a>
-    <a class="btn ghost" href="/work/">Our work</a>
+    <a class="btn ghost" href="#system">Our work</a>
   </div>
 </header>
 
 <figure class="band">
   <img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_2400/Nepal-Expedition-Mountain-Preservation_vxqekg" alt="A herder leads loaded yaks toward the high peaks of the Nepal Himalaya" fetchpriority="high">
-  <figcaption>Above the Khumbu, Nepal. Photography by Dirk Collins.</figcaption>
 </figure>
 
 <section id="nepal" style="border-top:0">
@@ -219,16 +216,14 @@
     <div class="split">
       <div>
         <span class="eyebrow" style="color:#8E2F1F">Right now, the need is here.</span>
-        <h2>This valley is personal.</h2>
-        <p class="lead">On August 26, flash floods tore through communities along the Trishuli River in Rasuwa and Nuwakot, the valley where our work began. Homes, farmland, roads and critical infrastructure were damaged or destroyed.</p>
-        <p>For MPF, this isn&rsquo;t a distant disaster. Our partners are there. The farming families are there. The schools and communities we know are there.</p>
-        <p>The Nepal Flood Recovery Fund is supporting immediate relief and rebuilding through people who were in the valley long before the flood and will remain long after it. In October, our team will be there ourselves: to listen, document the recovery, understand what is needed next and continue the work for the long term.</p>
-        <p><strong>We knew this valley before the flood. We will be here for what comes after.</strong></p>
+        <h2>The Trishuli valley, after the flood.</h2>
+        <p class="lead">On August 26, a glacial collapse sent a flood down the Trishuli River through Rasuwa and Nuwakot. Homes, farmland, roads and critical infrastructure were damaged or destroyed.</p>
+        <p>For us, this isn&rsquo;t a distant disaster. Our partners are there. The farming families are there. The schools and communities we know are there.</p>
+        <p>The Nepal Flood Recovery Fund is supporting immediate relief and rebuilding through people who were in the valley long before the flood and will remain long after it.</p>
         <p style="margin-top:26px"><a class="btn gold" href="/nepal/">Nepal Flood Recovery &rarr;</a></p>
       </div>
       <figure style="margin:0">
-        <div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,g_faces,f_auto,q_auto,w_1100,h_780/Nepal-Preservation-Guardianship_fbxyyt" alt="Children gathered outside their village school in the Nepal mid-hills" loading="lazy"></div>
-        <figcaption style="font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:var(--ink-faint);padding-top:12px">A village school in the Nuwakot mid-hills, one of the districts the flood passed through.</figcaption>
+        <div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,f_auto,q_auto,w_1100,h_780/p5_1013_2025_nepal_web_me0azz" alt="Rows of young coffee plants under prayer flags on a hillside farm in Nuwakot" loading="lazy"></div>
       </figure>
     </div>
   </div>
@@ -244,20 +239,28 @@
   </div>
 </section>
 
+<section id="mission">
+  <div class="wrap narrow center" style="text-align:center">
+    <span class="eyebrow">Our Mission</span>
+    <p class="statement">To preserve the world&rsquo;s great mountain ranges and to strengthen the communities who call them home. We fund the permanent protection of high-mountain forests, watersheds, and wildlife corridors. We build and equip schools and health clinics in remote mountain villages, and we invest in safe, dignified livelihoods that keep forests standing and families together.</p>
+    <hr class="goldrule">
+    <span class="eyebrow">Our Vision</span>
+    <p class="statement">A world where every great mountain range is preserved by the people who live beneath it; where standing forests, thriving villages, open wildlife corridors, and <em>safe childhoods</em> are one and the same achievement.</p>
+  </div>
+</section>
+
 <section id="origin">
   <div class="wrap">
     <div class="split">
       <div>
         <span class="eyebrow">The Origin</span>
-        <h2>It began in one Himalayan valley.</h2>
-        <p class="lead">In 2007, Bandi Nima Sherpa Tenzing looked across the terraced hills of Nepal&rsquo;s Nuwakot district and saw a community under pressure. Families were leaving. Opportunity was disappearing. Forests were vulnerable. Children faced risks that reached far beyond the mountains.</p>
-        <p>She understood something fundamental: <strong>you cannot protect a place if the people who live there cannot afford to stay.</strong></p>
-        <p>The Tenzing family planted coffee. What began as a farm became a network of growers and livelihoods. Coffee helped support schools, clinics and community programs. Local partners built relationships that have endured for nearly two decades.</p>
-        <p>Mountain Preservation Foundation grew from that same idea: <strong>preservation begins with people.</strong></p>
+        <h2>It began with one family.</h2>
+        <p class="lead">In 2007, while Tashi Wangchuk Tenzing, grandson of Tenzing Norgay, was summiting Everest for the third time, his wife Bandi Nima Sherpa Tenzing stood above the terraced hills of Nuwakot district and saw something beyond the landscape: a community where human trafficking and emigration were draining families from the mountains.</p>
+        <p>She decided to change the economics. She believed the mountains could only be protected if families could prosper without leaving them. The Tenzings planted coffee. From that decision grew a farm that supports hundreds of families, and a nonprofit that builds schools, equips clinics, sponsors children, and runs anti-trafficking programs across the Himalaya.</p>
+        <p><strong>The coffee is the product. The protection is the purpose.</strong> The Foundation exists to carry that purpose to every great range.</p>
       </div>
       <figure style="margin:0">
-        <div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_1100/p5_0509_2025_nepal_web_bil0vm" alt="A teacher seated with her class in a circle in a village classroom in Nepal" loading="lazy"></div>
-        <figcaption style="font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:var(--ink-faint);padding-top:12px">A village classroom in the mid-hills. Education is where protection begins.</figcaption>
+        <div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_1100/p5_1342_2025_nepal_web_mwe4ow" alt="Two women growers among coffee trees at Nuwa Estate" loading="lazy"></div>
       </figure>
     </div>
   </div>
@@ -267,17 +270,16 @@
   <div class="wrap">
     <span class="eyebrow">Our Work</span>
     <h2 style="max-width:700px;margin-left:0">One mountain. One system.</h2>
-    <p class="lead" style="max-width:700px">We don&rsquo;t separate environmental preservation from the lives being lived within it. Our work brings together five things that too often are addressed separately.</p>
+    <p class="lead" style="max-width:700px">Our work brings together five things that are too often addressed separately.</p>
     <div class="cards">
-      <div class="card"><span class="tag">Land</span><h3>Landscape protection</h3><p>Protect forests, watersheds, wildlife habitat and the landscapes that connect them.</p></div>
-      <div class="card"><span class="tag">Livelihoods</span><h3>Durable local economies</h3><p>Create local economies that make a standing forest more valuable than a cleared one.</p></div>
-      <div class="card"><span class="tag">Education</span><h3>Schools and teachers</h3><p>Support schools, teachers and access to education in remote mountain communities.</p></div>
-      <div class="card"><span class="tag">Health</span><h3>Clinics and care</h3><p>Strengthen clinics and basic healthcare where geography makes access difficult.</p></div>
-      <div class="card"><span class="tag">People</span><h3>Children and families</h3><p>Support programs that protect vulnerable children and families and strengthen the communities themselves.</p></div>
+      <div class="card"><span class="tag">Land</span><h3>Landscape protection</h3><p>Protect forests, watersheds, wildlife habitat and the landscapes that connect them: high-mountain forests that are home to red pandas, Himalayan black bears, and hundreds of bird species.</p></div>
+      <div class="card"><span class="tag">Livelihoods</span><h3>Durable local economies</h3><p>Income rooted in a standing forest: coffee, forest products and eco-tourism that give young people a reason to stay.</p></div>
+      <div class="card"><span class="tag">Education</span><h3>Schools and teachers</h3><p>Building, equipping, and sustaining schools in remote mountain villages, with teacher support for children who would otherwise have no access.</p></div>
+      <div class="card"><span class="tag">Health</span><h3>Clinics and care</h3><p>Rural health clinics serving mountain populations far from the nearest hospital, where geography makes access difficult.</p></div>
+      <div class="card"><span class="tag">People</span><h3>Children and families</h3><p>Anti-trafficking programs, child sponsorship, and women&rsquo;s leadership through coffee cooperatives, so families can build a future at home.</p></div>
     </div>
     <div class="narrow" style="margin-top:44px;margin-left:0">
       <p class="statement">Because when a village can thrive, families can stay. When families can stay, local knowledge remains. And when communities have a stake in protecting the land around them, preservation has a chance to last.</p>
-      <p style="margin-top:22px"><a class="btn ghost" href="/work/">Our work in detail &rarr;</a></p>
     </div>
   </div>
 </section>
@@ -287,21 +289,15 @@
     <div class="albumhead">
       <div>
         <span class="eyebrow">The Work, in Pictures</span>
-        <h2 style="margin-bottom:6px">The farms that hold the forest.</h2>
+        <h2 style="margin-bottom:6px">The valley at harvest.</h2>
       </div>
-      <span class="hint">Scroll →</span>
     </div>
   </div>
   <div class="album">
-    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0183_2025_nepal_web_srojwu" alt="Freshly picked coffee cherries held in cupped hands" loading="lazy"></div><figcaption>The harvest that changed the economics of a valley.</figcaption></figure>
-    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_1005_2025_nepal_web_yv738b" alt="Hands picking ripe red coffee cherries from the branch" loading="lazy"></div><figcaption>Shade-grown arabica, picked by hand at altitude.</figcaption></figure>
-    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0957_2025_nepal_web_ouljyv" alt="A farmer greets the camera among coffee trees" loading="lazy"></div><figcaption>Nuwakot's growers, the first guardians of the valley.</figcaption></figure>
-    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_1013_2025_nepal_web_me0azz" alt="Rows of young coffee plants under prayer flags on a hillside farm" loading="lazy"></div><figcaption>New plantings on the hillside, 70,000 plants and growing.</figcaption></figure>
-    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0547_2025_nepal_web_t4uvyg" alt="A worker turning drying coffee beans at the processing station" loading="lazy"></div><figcaption>Processing at origin, value kept in the valley.</figcaption></figure>
-    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_3367_2025_nepal_web_bgbpz3" alt="A woman laughs beside drying trays of coffee" loading="lazy"></div><figcaption>The drying trays, and the women who run them.</figcaption></figure>
-    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_2282_2025_nepal_web_l02va5" alt="Farmers planting rice together in a terraced paddy" loading="lazy"></div><figcaption>Livelihood is preservation: the valley working its own land.</figcaption></figure>
-    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_3246_2025_nepal_web_ey10ay" alt="Women sorting beans over wide woven trays" loading="lazy"></div><figcaption>Sorting the harvest, Nuwakot district.</figcaption></figure>
-    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0808_2025_nepal_web_gpaspf" alt="Cupping fresh coffee with partners at Nuwa Estate" loading="lazy"></div><figcaption>Cupping the harvest with partners at Nuwa Estate.</figcaption></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0183_2025_nepal_web_srojwu" alt="Freshly picked coffee cherries held in cupped hands" loading="lazy"></div></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0957_2025_nepal_web_ouljyv" alt="A farmer greets the camera among coffee trees" loading="lazy"></div></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0547_2025_nepal_web_t4uvyg" alt="A worker turning drying coffee beans at the processing station" loading="lazy"></div></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_3367_2025_nepal_web_bgbpz3" alt="A woman laughs beside drying trays of coffee" loading="lazy"></div></figure>
   </div>
 </section>
 
@@ -310,59 +306,86 @@
     <div class="split">
       <figure style="margin:0">
         <div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_1100/Nepal-Coffee-Tashi_on7rne" alt="Tashi Wangchuk Tenzing inspecting washed coffee beans at the processing station" loading="lazy"></div>
-        <figcaption style="font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:var(--ink-faint);padding-top:12px">Tashi Wangchuk Tenzing at the washing station, Nuwa Estate.</figcaption>
       </figure>
       <div>
         <span class="eyebrow">Our Partners</span>
         <h2>This work didn&rsquo;t begin with us. And that&rsquo;s important.</h2>
-        <p class="lead">For nearly two decades, Nuwa Estate, the Nepal Green Tara Foundation and local partners have been doing this work in Nepal: building schools, supporting clinics, creating livelihoods and strengthening communities.</p>
-        <p>MPF was created to stand behind that work, help it grow, and build a preservation model capable of reaching mountain communities far beyond Nepal.</p>
-        <p class="statement" style="font-size:20px">We begin with relationships. We listen locally. We protect what makes a place distinct. And we stay long enough to make a difference.</p>
+        <p class="lead">Nuwa Estate, the Nepal Green Tara Foundation and local partners were building schools, supporting clinics and creating livelihoods in Nepal long before the foundation existed.</p>
+        <p>Mountain Preservation Foundation was created to stand behind that work, help it grow, and build a preservation model capable of reaching mountain communities far beyond Nepal.</p>
+        <p>The figures below are our partners&rsquo; record to date, as reported to us. We will share our own results as our grants are made.</p>
       </div>
     </div>
   </div>
+  <div class="wrap">
+    <div class="statgrid">
+      <div class="stat"><div class="num">25,000+</div><div class="what">residents reached through rural health clinics</div></div>
+      <div class="stat"><div class="num">4,500+</div><div class="what">students reached through schools built and upgraded with partners</div></div>
+      <div class="stat"><div class="num">432</div><div class="what">farming households directly supported, with 1,028 more supported indirectly</div></div>
+      <div class="stat"><div class="num">70,000</div><div class="what">organic arabica plants cultivated at altitude</div></div>
+    </div>
+  </div>
 </section>
+
 
 <section id="beyond">
   <div class="wrap narrow">
     <span class="eyebrow">Beyond Nepal</span>
     <h2>Nepal is where the work begins. It is not where it ends.</h2>
     <p class="lead">The challenges facing mountain communities are global. From the Himalaya to Africa, the Andes, the Rockies and other great ranges, environmental pressure and economic pressure are often part of the same story.</p>
-    <p>MPF is building an approach designed to travel, but never to be imposed. Every place is different. Every community knows its mountain better than we ever will. So wherever we go, the principle remains the same:</p>
-    <p><strong>Work locally. Build long relationships. Strengthen communities. Protect the mountain.</strong></p>
+    <p>We are building an approach designed to travel, but never to be imposed. Every place is different. Every community knows its mountain better than we ever will. So wherever we go, the principle remains the same:</p>
+    <p><strong>Work locally. Build long relationships. Protect the mountain.</strong></p>
+    <p>What follows is a roadmap of planned phases, not commitments made, and it will change as we learn.</p>
+    <ul style="margin:0 0 18px 0;padding-left:22px;line-height:1.8">
+      <li><strong>Kenya:</strong> preservation partnerships with Maasai communities at Mt Kenya and Amboseli, planned for 2027.</li>
+      <li><strong>Bolivia:</strong> highland cooperatives in the Yungas, planned for 2027.</li>
+      <li><strong>Ethiopia:</strong> Yirgacheffe and Sidama, in the pipeline.</li>
+      <li><strong>Patagonia:</strong> named from the start.</li>
+    </ul>
+  </div>
+  <div class="album" style="margin-top:40px">
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0040_2025_kenya_web_wol8q3" alt="An elephant in golden morning light on the Kenyan savanna" loading="lazy"></div></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0896_2025_kenya_web_hh3qkv" alt="A herd of elephants crossing green wetland beneath the mountain" loading="lazy"></div></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_1390_2025_kenya_web_pcufob" alt="Flamingos wading in a soda lake" loading="lazy"></div></figure>
+    <figure><div class="frame"><img src="https://res.cloudinary.com/planet5/image/upload/c_fill,w_680,h_472,f_auto,q_auto/p5_0167_2025_kenya_web_nnlrvj" alt="A lion resting in tall golden grass" loading="lazy"></div></figure>
   </div>
 </section>
 
 <figure class="band" style="margin-top:0">
   <img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_2400/p5_0520_2025_kenya_web_h3t3oi" alt="The peaks of Mt Kenya rising over the highlands" loading="lazy">
-  <figcaption>Mt Kenya's highlands, from the 2025 origin expedition. Photography by Dirk Collins.</figcaption>
 </figure>
 
 <section id="model" style="border-top:0">
+  <div class="wrap narrow">
+    <span class="eyebrow">How We Are Funded</span>
+    <h2>A different way to fund preservation.</h2>
+    <p class="lead">Mountain Preservation Foundation was designed so that philanthropy can remain focused on the work.</p>
+    <p>Planet 5 has committed a portion of revenue from its Guardian Program to help support the Foundation&rsquo;s operating costs. That commitment is made under a written agreement, and our commercial and philanthropic activities remain separate, with independent governance and accounting. The Guardian Program is a Planet 5 product; you can read about it on <a href="https://www.planet5media.com/guardians" style="color:var(--gold-deep)">planet5media.com</a>.</p>
+    <p>Donors to the Foundation are giving to the Foundation alone. Gifts carry no goods, services, or membership benefits. Designated gifts, such as the Nepal Flood Recovery Fund, are reserved for the designated program.</p>
+    <p><strong>The purpose is simple: keep more philanthropic capital where it belongs, in the mountains.</strong></p>
+  </div>
+</section>
+
+<section id="accountability">
+  <div class="wrap narrow">
+    <span class="eyebrow">Accountability</span>
+    <h2>We measure what we promise.</h2>
+    <p class="lead">Good intentions aren&rsquo;t enough. We are building our work around clear goals and measurable outcomes.</p>
+  </div>
   <div class="wrap">
-    <div class="split">
-      <div>
-        <span class="eyebrow">How We Are Funded</span>
-        <h2>A different way to fund preservation.</h2>
-        <p class="lead">Mountain Preservation Foundation was designed so that philanthropy can remain focused on the work.</p>
-        <p>Planet 5 has committed a portion of Guardian Program revenue to help support the Foundation&rsquo;s operating structure. Our commercial and philanthropic activities remain separate, with independent governance and accounting.</p>
-        <p>The purpose is simple: <strong>keep more philanthropic capital where it belongs, in the mountains.</strong></p>
-        <p style="margin-top:22px"><a class="btn ghost" href="/accountability/#model">How our model works &rarr;</a></p>
-      </div>
-      <div>
-        <span class="eyebrow">Accountability</span>
-        <h2>We measure what we promise.</h2>
-        <p class="lead">Good intentions aren&rsquo;t enough. Our work is being built around transparent goals, independent oversight and measurable outcomes: from acres of habitat protected and livelihoods supported to schools, health programs and community initiatives.</p>
-        <p>As MPF grows, our reporting will grow with it. We intend to show not only where money went, but what changed because it was there.</p>
-        <p style="margin-top:22px"><a class="btn ghost" href="/accountability/">Accountability &rarr;</a></p>
-      </div>
+    <div class="rows">
+      <div class="row"><span class="k"><svg class="ico" viewBox="0 0 24 24"><path d="M3 9l9-5.5L21 9M4.5 9v8M9.5 9v8M14.5 9v8M19.5 9v8M3 20h18"/></svg>Governance</span><span class="v">Our commercial and philanthropic activities are kept separate, with written agreements and separate books.</span></div>
+      <div class="row"><span class="k"><svg class="ico" viewBox="0 0 24 24"><path d="M12 6c-2-1.4-4.5-2-8-2v14c3.5 0 6 .6 8 2 2-1.4 4.5-2 8-2V4c-3.5 0-6 .6-8 2z"/><path d="M12 6v14"/></svg>Transparency</span><span class="v">Our IRS filings are public records, and we will make them available on request.</span></div>
+      <div class="row"><span class="k"><svg class="ico" viewBox="0 0 24 24"><path d="M12 20s-7-4.5-9-9a4.9 4.9 0 0 1 9-2.4A4.9 4.9 0 0 1 21 11c-2 4.5-9 9-9 9z"/></svg>Donor intent</span><span class="v">Designated gifts are applied to the designated program. If a program becomes fully funded, we apply the balance to the closest related need and let you know.</span></div>
     </div>
+  </div>
+  <div class="wrap narrow" style="margin-top:40px">
+    <p>The Foundation was incorporated in Wyoming on August 24, 2026. Our first program is the Nepal Flood Recovery Fund. As grants are made, we intend to share what they funded and what changed because of them: habitat protected, livelihoods supported, and schools and health programs strengthened.</p>
+    <p>Mountain Preservation Foundation is a Wyoming nonprofit corporation, EIN 42-4666179, with a registered office at 30 N Gould St, Ste R, Sheridan, WY 82801. Questions about governance or a gift: <a href="mailto:give@mountainpreservation.org" style="color:var(--gold-deep)">give@mountainpreservation.org</a>.</p>
   </div>
 </section>
 
 <figure class="band" style="margin-top:0">
   <img src="https://res.cloudinary.com/planet5/image/upload/f_auto,q_auto,w_2400/p5__2025_everest_basecamp_nepal_pano_web_u6tusu" alt="Everest basecamp tents beneath the high peaks at midday" loading="lazy">
-  <figcaption>Everest basecamp. The mountains hold what you give them.</figcaption>
 </figure>
 
 <section id="give" style="border-top:0">
@@ -372,10 +395,10 @@
     <p class="statement">A forest protected. A livelihood created. A child who can remain in school. A family able to build a future without leaving home. A community with the resources to protect the mountain it has lived beneath for generations.</p>
     <p class="lead">This is what preservation can look like. And we&rsquo;re just beginning.</p>
     <div class="give-btns">
-      <a class="btn gold" href="/give/">Give to MPF</a>
+      <a class="btn gold" href="/give/">Give</a>
       <a class="btn ghost" href="mailto:give@mountainpreservation.org?subject=Mountain%20Preservation%20Foundation">Start a conversation</a>
     </div>
-    <p class="finequote" style="max-width:640px;margin-left:auto;margin-right:auto">Mountain Preservation Foundation is a Wyoming nonprofit corporation (EIN 42-4666179). Gifts carry no goods, services, or membership benefits, and we never sell or share donor information.</p>
+    <p class="finequote" style="max-width:640px;margin-left:auto;margin-right:auto">Gifts carry no goods, services, or membership benefits, and we never sell or share donor information.</p>
   </div>
 </section>
 
@@ -386,6 +409,7 @@
       <span>Mountain Preservation Foundation</span>
     </a>
     <p>A Wyoming nonprofit corporation · EIN 42-4666179</p>
+    <p><a href="https://www.planet5media.com">Planet 5</a> has committed a portion of Guardian Program revenue to help support the Foundation&rsquo;s operating costs.</p>
     <p>Photography from the field in Nepal and Kenya, from the personal library of Dirk Collins, used with permission. © 2026 Mountain Preservation Foundation. All rights reserved.</p>
   </div>
 </footer>
