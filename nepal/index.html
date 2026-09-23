@@ -277,5 +277,17 @@
   }).catch(function(){});
 })();
 </script>
+<script>
+(function(){
+  // Carry a personal-email reference (?ref=TOKEN) into Stripe checkout as client_reference_id,
+  // so a gift can be matched back to the email it came from. Remembered per browser session.
+  try{
+    var u=new URL(location.href),ref=u.searchParams.get('ref');
+    if(ref&&/^[A-Za-z0-9_-]{4,40}$/.test(ref)){sessionStorage.setItem('mpf_ref',ref);}
+    ref=sessionStorage.getItem('mpf_ref');
+    if(ref){document.querySelectorAll('a[href^="https://donate.stripe.com/"]').forEach(function(a){var h=new URL(a.href);h.searchParams.set('client_reference_id',ref);a.href=h.toString();});}
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
